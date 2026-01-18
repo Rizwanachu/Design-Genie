@@ -470,7 +470,7 @@ function LocationSection() {
   return (
     <section id="location" className="py-0 relative h-[500px] w-full bg-muted">
       <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15082.99026214218!2d72.93721345!3d19.0754876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1709123456789!5m2!1sen!2sin" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.764308959676!2d76.2606409!3d9.9535576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b086d005e347f79%3A0xb7b817edd7fef581!2sW%26H%20View%20Residency!5e0!3m2!1sen!2sin!4v1768770256217!5m2!1sen!2sin" 
         width="100%" 
         height="100%" 
         style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }} 
@@ -482,20 +482,20 @@ function LocationSection() {
       <div className="absolute top-1/2 left-4 md:left-12 -translate-y-1/2 bg-card/90 backdrop-blur border border-white/10 p-8 rounded max-w-sm">
         <h3 className="text-2xl font-display font-bold text-white mb-4">Visit Us</h3>
         <p className="text-muted-foreground mb-4">
-          Located in the serene hills, offering panoramic views of the valley.
+          Experience premium hospitality in the heart of Kochi.
         </p>
         <div className="space-y-3">
-          <div className="flex items-center gap-3 text-sm text-white">
-            <MapPin className="h-4 w-4 text-primary" />
-            123 Hilltop Road, Scenic View Valley
+          <div className="flex items-start gap-3 text-sm text-white">
+            <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+            <span>6/153, Jew Town Rd, Kappalandimukku,<br />Mattancherry, Kochi, Kerala 682002</span>
           </div>
           <div className="flex items-center gap-3 text-sm text-white">
             <Phone className="h-4 w-4 text-primary" />
-            +91 98765 43210
+            +91 81294 68888
           </div>
           <div className="flex items-center gap-3 text-sm text-white">
             <Mail className="h-4 w-4 text-primary" />
-            reservations@whview.com
+            reservations@whv-residency.com
           </div>
         </div>
       </div>
