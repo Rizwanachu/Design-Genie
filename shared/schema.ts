@@ -17,7 +17,8 @@ export const rooms = pgTable("rooms", {
   price: integer("price"), // Stored in lowest currency unit (e.g., cents/paisa) or just display text if variable
   roomNumbers: text("room_numbers").array(),
   features: text("features").array(),
-  imageUrl: text("image_url").notNull(), // Placeholder for now
+  imageUrl: text("image_url").notNull(),
+  gallery: text("gallery").array(),
 });
 
 export const insertRoomSchema = createInsertSchema(rooms).omit({ id: true });

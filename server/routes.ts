@@ -44,6 +44,12 @@ Room No: 105 & 210`,
       roomNumbers: ["105", "210"],
       features: ["Breakfast Included", "Flat Screen TV", "Hairdryer", "Writing Desk", "Towel Warmer", "Shower bathtub", "Balcony or Terrace", "Ironing Board", "Kettle Tea", "Telephone", "Saving Safe", "Transportations", "Rules & Regulations", "Check-in: After 02:00pm", "Checkout: Before 11:00am", "Late Checkout: Additional charge 50% of the room rate", "No smoking inside the room and No pets", "Identification document is must for hotel registration"],
       imageUrl: "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1000&auto=format&fit=crop",
+      gallery: [
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1000&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1000&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1000&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1000&auto=format&fit=crop"
+      ],
     });
 
     await storage.createRoom({
