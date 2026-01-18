@@ -419,6 +419,83 @@ function ServicesSection() {
   );
 }
 
+// --- NEARBY SECTION ---
+function NearbySection() {
+  const attractions = [
+    {
+      title: "Paradesi Synagogue",
+      distance: "0.2 km",
+      description: "A 16th-century synagogue known for its Chinese tiles and Belgian chandeliers.",
+      image: "https://images.unsplash.com/photo-1548013146-72479768bbf4?q=80&w=2070&auto=format&fit=crop",
+      category: "Heritage"
+    },
+    {
+      title: "Mattancherry Palace",
+      distance: "0.4 km",
+      description: "Also known as the Dutch Palace, featuring mural paintings and Cochin Rajas' portraits.",
+      image: "https://images.unsplash.com/photo-1582510003544-2d095665039b?q=80&w=2070&auto=format&fit=crop",
+      category: "History"
+    },
+    {
+      title: "Chinese Fishing Nets",
+      distance: "1.2 km",
+      description: "Iconic fixed cantilever fishing nets, especially beautiful at sunset.",
+      image: "https://images.unsplash.com/photo-1566373059005-7f5e1f0e42d7?q=80&w=2070&auto=format&fit=crop",
+      category: "Landmark"
+    }
+  ];
+
+  return (
+    <section id="nearby" className="py-24 bg-[#0A0A0A]">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col lg:flex-row gap-16">
+          <div className="lg:w-1/3">
+            <span className="text-primary font-display font-medium tracking-widest uppercase mb-2 block">Explore Kochi</span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">Nearby Attractions</h2>
+            <p className="text-muted-foreground mb-8">
+              Discover the rich heritage and vibrant culture of Mattancherry. Everything you want to see is just a short walk away.
+            </p>
+            <div className="space-y-4">
+              {attractions.map((item, idx) => (
+                <motion.div 
+                  key={idx}
+                  className="bg-card border border-white/5 p-4 rounded-lg hover:border-primary/50 transition-all cursor-pointer group"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                >
+                  <div className="flex justify-between items-start mb-2">
+                    <span className="text-xs font-bold uppercase tracking-tighter text-primary">{item.category}</span>
+                    <span className="text-xs text-muted-foreground">{item.distance}</span>
+                  </div>
+                  <h4 className="text-lg font-display font-bold text-white mb-1 group-hover:text-primary transition-colors">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground line-clamp-2">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="lg:w-2/3">
+            <div className="relative h-full min-h-[500px] rounded-lg overflow-hidden border border-white/10">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7859.528617919352!2d76.258!3d9.954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sattractions%20near%20Mattancherry%2C%20Kochi!5e0!3m2!1sen!2sin!4v1768770256217!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div className="absolute inset-0 pointer-events-none border-[12px] border-black/10" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // --- GALLERY SECTION ---
 function GallerySection() {
   // Placeholder images
@@ -631,6 +708,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <RoomsSection />
+        <NearbySection />
         <ServicesSection />
         <GallerySection />
         <LocationSection />
