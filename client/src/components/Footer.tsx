@@ -9,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="bg-white p-1 rounded-sm">
+              <div className="p-1 rounded-sm bg-[#292a3100] text-[#fafafa00]">
                 <img src={logo} alt="Logo" className="h-8 w-auto" />
               </div>
               <span className="text-xl font-display font-bold text-white tracking-widest">W & H VIEW</span>
