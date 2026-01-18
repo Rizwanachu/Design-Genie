@@ -39,15 +39,18 @@ export function Footer() {
             <ul className="space-y-4 text-muted-foreground">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0" />
-                <span>123 Hilltop Road, Scenic View Valley, India 410401</span>
+                <span>6/153, Jew Town Rd, Kappalandimukku, Mattancherry, Kochi, Kerala 682002</span>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
-                <span>+91 98765 43210</span>
+                <div className="flex flex-col">
+                  <span>+91 8129 46 8888</span>
+                  <span>+91 484 291 2900</span>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <span>reservations@whview.com</span>
+                <span>info@whv-residency.com</span>
               </li>
             </ul>
           </div>
