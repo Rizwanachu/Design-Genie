@@ -1,0 +1,267 @@
+You are a senior UI/UX designer and frontend developer.
+
+Build a COMPLETE, REAL, CLIENT-READY website for a hospitality brand named:
+
+W & H View Residency
+
+Use the uploaded logo as the primary brand reference for color, tone, and style.
+
+This is a premium hotel / residency focused on comfort, hygiene, trust, and a calm luxury experience.
+
+━━━━━━━━━━━━━━━━━━━━━━
+TECH STACK
+━━━━━━━━━━━━━━━━━━━━━━
+- Pure HTML, CSS, JavaScript only
+- NO WordPress, NO frameworks
+- Clean, readable, commented code
+- Mobile-first and fully responsive
+- Optimized for fast loading
+- Easy to host on Netlify / Hostinger / any static hosting
+
+Project structure:
+- index.html
+- style.css
+- script.js
+
+━━━━━━━━━━━━━━━━━━━━━━
+DESIGN DIRECTION
+━━━━━━━━━━━━━━━━━━━━━━
+- Dark luxury theme inspired by the logo
+- Deep charcoal / black background
+- Gold accents and white text
+- Modern sans-serif typography
+- Premium spacing and alignment
+- Calm, trustworthy, hotel-style feel
+- No clutter, no overcrowding
+- Subtle animations only (fade-in, slide-up, soft hover glow)
+
+Avoid:
+- Over-designed sections
+- Excessive shadows
+- Loud colors
+- Heavy animations
+
+━━━━━━━━━━━━━━━━━━━━━━
+WEBSITE STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━
+
+1) HEADER / NAVBAR
+- Logo on the left
+- Links: Home, Rooms, Services, Gallery, Location, Contact
+- "Book Now" CTA button
+- Sticky header with subtle background blur on scroll
+
+━━━━━━━━━━━━━━━━━━━━━━
+2) HERO SECTION
+━━━━━━━━━━━━━━━━━━━━━━
+- Full screen height
+- Dark gradient or elegant abstract background
+- Heading (large):
+  "Comfortable Stays. Premium Experience."
+- Subheading:
+  "Welcome to W & H View Residency — your perfect stay in Kochi."
+- Primary CTA: "Book Your Stay"
+- Secondary CTA: "View Rooms"
+- Smooth fade-in on load
+
+━━━━━━━━━━━━━━━━━━━━━━
+3) ABOUT SECTION
+━━━━━━━━━━━━━━━━━━━━━━
+Two-column layout:
+- Left: text
+- Right: image placeholder
+
+Content:
+"W & H View Residency offers a luxurious, hygienic, and family-friendly stay in the heart of Mattancherry, Kochi. Every room is thoughtfully designed to provide comfort, privacy, and peace, making it ideal for families, professionals, and leisure travelers."
+
+Highlight icons:
+- Clean & Hygienic Rooms
+- Peaceful Environment
+- Friendly Service
+- Trusted Hospitality
+
+━━━━━━━━━━━━━━━━━━━━━━
+4) ROOMS SECTION
+━━━━━━━━━━━━━━━━━━━━━━
+Section title: "Our Rooms"
+
+Create 3 premium room cards.
+
+A) Premium King Room
+Details:
+- Size: 34 sqm
+- Beds: 1
+- Bathrooms: 1
+- Adults: 2 | Children: 2
+- River View
+Description (cleaned & premium):
+"Experience unmatched luxury with our AI-powered king-size bed featuring massage functionality, premium pillow options, smart controls, and a serene river view."
+
+Facilities (icons):
+Breakfast Included, Flat TV, Hairdryer, Writing Desk, Towel Warmer, Bathtub, Balcony, Ironing Board, Kettle, Telephone, Safe
+
+Room No: 105 & 210
+
+Rules:
+Check-in: After 02:00 PM
+Check-out: Before 11:00 AM
+Late Checkout: 50% room charge
+No smoking inside rooms
+No pets
+Valid ID required
+
+B) Deluxe King Room
+Details:
+- Size: 23 sqm
+- Beds: 2
+- Bathrooms: 2
+- Adults: 1 | Children: 2
+- River View
+Description:
+"Elegant interiors, premium bedding, smart controls, and a calm river-facing atmosphere designed for comfort and relaxation."
+
+Room No: 101, 102, 103, 206, 207, 208
+Same rules & facilities style as above
+
+C) Standard Room
+Details:
+- Size: 23 sqm
+- Beds: 2
+- Bathrooms: 1
+- Adults: 2 | Children: 1
+Description:
+"A comfortable and practical stay with essential amenities, ideal for short visits and business travelers."
+
+Room No: 104 & 209
+Same rules & facilities style
+
+Use modal or expandable layout for room details (not cluttered cards).
+
+━━━━━━━━━━━━━━━━━━━━━━
+5) GUEST SERVICES & POLICIES
+━━━━━━━━━━━━━━━━━━━━━━
+Design this section using accordion or clean cards.
+
+Include:
+
+Check-in & Check-out:
+- Check-in: 14:00 hrs
+- Check-out: 12:00 noon
+- Early/late check-in subject to availability
+
+Pets:
+- Pets not allowed
+
+Cancellation:
+- Free cancellation up to 24 hours before check-in
+- One-night charge within 24 hours
+- No-shows charged full amount
+
+Payment:
+- Advance payment at booking or 48 hrs before check-in
+- Cash, UPI, Credit/Debit Cards
+
+Dining:
+- In-house restaurant under renovation
+- Online food orders available
+- No alcohol served
+
+Wi-Fi:
+- Complimentary high-speed Wi-Fi
+
+Wellness:
+- Ayurvedic massage with advance booking
+- Doctor-supervised treatments
+
+Parking:
+- Secure parking
+- Valet available on request
+
+General Terms:
+- Valid government ID required
+- Damage charged to guest
+- Smoking only in designated areas
+- Management reserves right to refuse service
+
+Privacy Summary:
+- Guest data used only for booking
+- Not shared with third parties
+- Data correction/deletion via info@whv-residency.com
+
+━━━━━━━━━━━━━━━━━━━━━━
+6) GALLERY
+━━━━━━━━━━━━━━━━━━━━━━
+- Grid layout
+- Image placeholders
+- Hover zoom + gold overlay
+- Button: "View Full Gallery"
+
+━━━━━━━━━━━━━━━━━━━━━━
+7) LOCATION
+━━━━━━━━━━━━━━━━━━━━━━
+Embed this map:
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.764308959676!2d76.2606409!3d9.9535576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b086d005e347f79%3A0xb7b817edd7fef581!2sW%26H%20View%20Residency!5e0!3m2!1sen!2sin!4v1768770256217!5m2!1sen!2sin" loading="lazy"></iframe>
+
+Address:
+6/153, Jew Town Rd, Kappalandimukku,
+Mattancherry, Kochi, Kerala 682002
+
+━━━━━━━━━━━━━━━━━━━━━━
+8) CONTACT SECTION
+━━━━━━━━━━━━━━━━━━━━━━
+Contact info:
+- Mobile: +91 8129 46 8888
+- Landline: +91 484 291 2900
+- Email: info@whv-residency.com
+
+Contact form (frontend only):
+- Name
+- Phone
+- Email
+- Subject
+- Message
+- Button: "Send Enquiry"
+
+Add simple JS validation.
+
+━━━━━━━━━━━━━━━━━━━━━━
+9) FINAL CTA
+━━━━━━━━━━━━━━━━━━━━━━
+Large banner:
+"Book Now for the Best Rates"
+Button:
+"Call +91 8129468888"
+
+━━━━━━━━━━━━━━━━━━━━━━
+10) FOOTER
+━━━━━━━━━━━━━━━━━━━━━━
+- Logo
+- Short tagline: "Luxury. Hygiene. Comfort."
+- Quick links
+- Copyright
+
+━━━━━━━━━━━━━━━━━━━━━━
+ANIMATIONS & INTERACTIONS
+━━━━━━━━━━━━━━━━━━━━━━
+- Smooth scrolling
+- Fade-in on section reveal
+- Hover glow on buttons
+- No heavy JS animations
+
+━━━━━━━━━━━━━━━━━━━━━━
+IMPORTANT
+━━━━━━━━━━━━━━━━━━━━━━
+This must feel like a REAL hotel website:
+- Calm
+- Trustworthy
+- Premium
+- Clean
+- Professional
+
+Output FULL CODE for:
+- index.html
+- style.css
+- script.js
+
+Ready to deploy instantly.
