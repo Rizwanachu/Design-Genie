@@ -477,7 +477,7 @@ function NearbySection() {
           </div>
           
           <div className="lg:w-2/3">
-            <div className="relative h-full min-h-[500px] rounded-lg overflow-hidden border border-white/10">
+            <div className="relative h-full min-h-[300px] md:min-h-[500px] rounded-lg overflow-hidden border border-white/10">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7859.528617919352!2d76.258!3d9.954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sattractions%20near%20Mattancherry%2C%20Kochi!5e0!3m2!1sen!2sin!4v1768770256217!5m2!1sen!2sin" 
                 width="100%" 
