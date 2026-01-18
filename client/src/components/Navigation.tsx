@@ -72,12 +72,13 @@ export function Navigation() {
                 {link.name}
               </button>
             ))}
-            <Button 
-              onClick={() => scrollToSection("#rooms")}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-8 font-display tracking-widest uppercase text-xs"
-            >
-              Book Now
-            </Button>
+            <a href="tel:+918129468888">
+              <Button 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-8 font-display tracking-widest uppercase text-xs"
+              >
+                Book Now
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Toggle */}
@@ -117,13 +118,14 @@ export function Navigation() {
               </button>
             ))}
             
-            <Button 
-              onClick={() => scrollToSection("#rooms")}
-              size="lg"
-              className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 px-12 text-lg font-display"
-            >
-              Book Your Stay
-            </Button>
+            <a href="tel:+918129468888" className="mt-8">
+              <Button 
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 text-lg font-display"
+              >
+                Book Your Stay
+              </Button>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

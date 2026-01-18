@@ -76,12 +76,13 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
             </div>
 
             <div className="mt-auto pt-6">
-              <Button 
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6 text-lg font-display"
-                onClick={() => onBook(room)}
-              >
-                Book This Room <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <a href="tel:+918129468888">
+                <Button 
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6 text-lg font-display"
+                >
+                  Book This Room <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>

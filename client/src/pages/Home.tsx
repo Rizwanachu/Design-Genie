@@ -54,13 +54,14 @@ function HeroSection() {
             Discover a sanctuary of elegance and tranquility. Your perfect getaway tailored for comfort, luxury, and unforgettable memories.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 font-display min-w-[180px]"
-              onClick={() => document.getElementById('rooms')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Book Your Stay
-            </Button>
+            <a href="tel:+918129468888">
+              <Button 
+                size="lg" 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 font-display min-w-[180px]"
+              >
+                Book Your Stay
+              </Button>
+            </a>
             <Button 
               size="lg" 
               variant="outline" 
@@ -232,12 +233,13 @@ function RoomsSection() {
                     >
                       Details
                     </Button>
-                    <Button 
-                      className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
-                      onClick={() => handleBookNow(room)}
-                    >
-                      Book Now
-                    </Button>
+                    <a href="tel:+918129468888" className="flex-1">
+                      <Button 
+                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                      >
+                        Book Now
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </motion.div>
