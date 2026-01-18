@@ -623,9 +623,9 @@ function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-24 bg-background relative z-10">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-16 relative z-20">
           <span className="text-primary font-display font-medium tracking-widest uppercase mb-2 block">Get in Touch</span>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">We'd Love to Hear From You</h2>
           <p className="text-muted-foreground">
