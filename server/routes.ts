@@ -12,7 +12,28 @@ async function seedDatabase() {
     await storage.createRoom({
       name: "Premium King Room",
       slug: "premium-king",
-      description: "Experience unparalleled luxury and comfort in our Premium King Room, designed for travelers who seek sophistication and relaxation.\n\nUnmatched Comfort and Style\n\nAI-Powered King-Size Bed: Adjustable height and customizable head/foot positioning with a built-in full-body massage function for the ultimate relaxation experience.\nTailored Rest: Select from 5 premium pillow options to ensure your perfect night’s sleep.\nExclusive Massage Functionality: A special head and back massaging bed adds an extra touch of luxury.\n\nModern Amenities for a Seamless Stay\n\nFully Air-Conditioned Room: Enjoy a cool, refreshing ambiance.\nAdvanced Controls: Touch-screen panels for effortless control of lighting, temperature, and entertainment.\nPremium Sound System: Elevate your experience with high-quality music and entertainment.\n\nHygienic and Practical Bathroom\n\nCleanliness Redefined: Separate WC, shower, hand-wash area, and neatly arranged bath linens ensure a premium, hygienic experience.\nStunning River View: Soak in the breathtaking Willingdon Island River View, offering a tranquil escape from the everyday.\n\nWhether you're traveling for business or leisure, the Premium King Room promises an unforgettable stay.\n\nRoom No: 105 & 210",
+      description: `Experience unparalleled luxury and comfort in our Premium King Room, designed for travelers who seek sophistication and relaxation.
+
+Unmatched Comfort and Style
+
+AI-Powered King-Size Bed: Adjustable height and customizable head/foot positioning with a built-in full-body massage function for the ultimate relaxation experience.
+Tailored Rest: Select from 5 premium pillow options to ensure your perfect night’s sleep.
+Exclusive Massage Functionality: A special head and back massaging bed adds an extra touch of luxury.
+
+Modern Amenities for a Seamless Stay
+
+Fully Air-Conditioned Room: Enjoy a cool, refreshing ambiance.
+Advanced Controls: Touch-screen panels for effortless control of lighting, temperature, and entertainment.
+Premium Sound System: Elevate your experience with high-quality music and entertainment.
+
+Hygienic and Practical Bathroom
+
+Cleanliness Redefined: Separate WC, shower, hand-wash area, and neatly arranged bath linens ensure a premium, hygienic experience.
+Stunning River View: Soak in the breathtaking Willingdon Island River View, offering a tranquil escape from the everyday.
+
+Whether you're traveling for business or leisure, the Premium King Room promises an unforgettable stay.
+
+Room No: 105 & 210`,
       size: "34sqm",
       beds: "1",
       bathrooms: 1,
