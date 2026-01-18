@@ -556,9 +556,31 @@ function LocationSection() {
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
       
-      <div className="absolute top-1/2 left-4 md:left-12 -translate-y-1/2 bg-card/90 backdrop-blur border border-white/10 p-8 rounded max-w-sm">
+      <div className="absolute top-1/2 left-4 md:left-12 -translate-y-1/2 bg-card/90 backdrop-blur border border-white/10 p-8 rounded max-w-sm hidden md:block">
         <h3 className="text-2xl font-display font-bold text-white mb-4">Visit Us</h3>
         <p className="text-muted-foreground mb-4">
+          Experience premium hospitality in the heart of Kochi.
+        </p>
+        <div className="space-y-3">
+          <div className="flex items-start gap-3 text-sm text-white">
+            <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+            <span>6/153, Jew Town Rd, Kappalandimukku,<br />Mattancherry, Kochi, Kerala 682002</span>
+          </div>
+          <div className="flex items-center gap-3 text-sm text-white">
+            <Phone className="h-4 w-4 text-primary" />
+            +91 8129 46 8888 / +91 484 291 2900
+          </div>
+          <div className="flex items-center gap-3 text-sm text-white">
+            <Mail className="h-4 w-4 text-primary" />
+            info@whv-residency.com
+          </div>
+        </div>
+      </div>
+      
+      {/* Mobile Visit Us Card - Rendered below the map in the layout flow */}
+      <div className="md:hidden bg-card border-t border-white/10 p-6">
+        <h3 className="text-xl font-display font-bold text-white mb-4">Visit Us</h3>
+        <p className="text-muted-foreground mb-4 text-sm">
           Experience premium hospitality in the heart of Kochi.
         </p>
         <div className="space-y-3">
