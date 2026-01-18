@@ -12,44 +12,21 @@ async function seedDatabase() {
     await storage.createRoom({
       name: "Premium King Room",
       slug: "premium-king",
-      description: `Experience unparalleled luxury and comfort in our Premium King Room, designed for travelers who seek sophistication and relaxation.
-
-Unmatched Comfort and Style
-
-AI-Powered King-Size Bed: Adjustable height and customizable head/foot positioning with a built-in full-body massage function for the ultimate relaxation experience.
-Tailored Rest: Select from 5 premium pillow options to ensure your perfect night’s sleep.
-Exclusive Massage Functionality: A special head and back massaging bed adds an extra touch of luxury.
-
-Modern Amenities for a Seamless Stay
-
-Fully Air-Conditioned Room: Enjoy a cool, refreshing ambiance.
-Advanced Controls: Touch-screen panels for effortless control of lighting, temperature, and entertainment.
-Premium Sound System: Elevate your experience with high-quality music and entertainment.
-
-Hygienic and Practical Bathroom
-
-Cleanliness Redefined: Separate WC, shower, hand-wash area, and neatly arranged bath linens ensure a premium, hygienic experience.
-Stunning River View: Soak in the breathtaking Willingdon Island River View, offering a tranquil escape from the everyday.
-
-Whether you're traveling for business or leisure, the Premium King Room promises an unforgettable stay.
-
-Room No: 105 & 210`,
-      size: "34sqm",
+      description: "Experience unmatched luxury with our AI-powered king-size bed featuring massage functionality, premium pillow options, smart controls, and a serene river view.",
+      size: "34 sqm",
       beds: "1",
       bathrooms: 1,
       adults: 2,
       children: 2,
       view: "River View",
-      price: 15000, // Example price
+      price: 15000,
       roomNumbers: ["105", "210"],
-      features: ["Breakfast Included", "Flat Screen TV", "Hairdryer", "Writing Desk", "Towel Warmer", "Shower bathtub", "Balcony or Terrace", "Ironing Board", "Kettle Tea", "Telephone", "Saving Safe", "Transportations", "Rules & Regulations", "Check-in: After 02:00pm", "Checkout: Before 11:00am", "Late Checkout: Additional charge 50% of the room rate", "No smoking inside the room and No pets", "Identification document is must for hotel registration"],
-      imageUrl: "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1000&auto=format&fit=crop",
-      gallery: [
-        "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1000&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1000&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1000&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1000&auto=format&fit=crop"
+      features: [
+        "Breakfast Included", "Flat TV", "Hairdryer", "Writing Desk", 
+        "Towel Warmer", "Bathtub", "Balcony", "Ironing Board", 
+        "Kettle", "Telephone", "Safe"
       ],
+      imageUrl: "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1000&auto=format&fit=crop",
     });
 
     await storage.createRoom({
@@ -64,7 +41,11 @@ Room No: 105 & 210`,
       view: "River View",
       price: 12000,
       roomNumbers: ["101", "102", "103", "206", "207", "208"],
-      features: ["Breakfast Included", "Flat TV", "Hairdryer", "Writing Desk", "Kettle", "Telephone", "Safe", "Smart Controls"],
+      features: [
+        "Breakfast Included", "Flat TV", "Hairdryer", "Writing Desk", 
+        "Towel Warmer", "Bathtub", "Balcony", "Ironing Board", 
+        "Kettle", "Telephone", "Safe"
+      ],
       imageUrl: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1000&auto=format&fit=crop",
     });
 
@@ -80,7 +61,11 @@ Room No: 105 & 210`,
       view: "City View",
       price: 8000,
       roomNumbers: ["104", "209"],
-      features: ["Breakfast Included", "Flat TV", "Writing Desk", "Kettle", "Telephone"],
+      features: [
+        "Breakfast Included", "Flat TV", "Hairdryer", "Writing Desk", 
+        "Towel Warmer", "Bathtub", "Balcony", "Ironing Board", 
+        "Kettle", "Telephone", "Safe"
+      ],
       imageUrl: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=1000&auto=format&fit=crop",
     });
     console.log("Rooms seeded successfully.");

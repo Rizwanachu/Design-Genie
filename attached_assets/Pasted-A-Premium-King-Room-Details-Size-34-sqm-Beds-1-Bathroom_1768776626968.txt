@@ -1,0 +1,100 @@
+A) Premium King Room
+Details:
+- Size: 34 sqm
+- Beds: 1
+- Bathrooms: 1
+- Adults: 2 | Children: 2
+- River View
+Description (cleaned & premium):
+"Experience unmatched luxury with our AI-powered king-size bed featuring massage functionality, premium pillow options, smart controls, and a serene river view."
+
+Facilities (icons):
+Breakfast Included, Flat TV, Hairdryer, Writing Desk, Towel Warmer, Bathtub, Balcony, Ironing Board, Kettle, Telephone, Safe
+
+Room No: 105 & 210
+
+Rules:
+Check-in: After 02:00 PM
+Check-out: Before 11:00 AM
+Late Checkout: 50% room charge
+No smoking inside rooms
+No pets
+Valid ID required
+
+B) Deluxe King Room
+Details:
+- Size: 23 sqm
+- Beds: 2
+- Bathrooms: 2
+- Adults: 1 | Children: 2
+- River View
+Description:
+"Elegant interiors, premium bedding, smart controls, and a calm river-facing atmosphere designed for comfort and relaxation."
+
+Room No: 101, 102, 103, 206, 207, 208
+Same rules & facilities style as above
+
+C) Standard Room
+Details:
+- Size: 23 sqm
+- Beds: 2
+- Bathrooms: 1
+- Adults: 2 | Children: 1
+Description:
+"A comfortable and practical stay with essential amenities, ideal for short visits and business travelers."
+
+Room No: 104 & 209
+Same rules & facilities style
+
+Use modal or expandable layout for room details (not cluttered cards).
+
+━━━━━━━━━━━━━━━━━━━━━━
+5) GUEST SERVICES & POLICIES
+━━━━━━━━━━━━━━━━━━━━━━
+Design this section using accordion or clean cards.
+
+Include:
+
+Check-in & Check-out:
+- Check-in: 14:00 hrs
+- Check-out: 12:00 noon
+- Early/late check-in subject to availability
+
+Pets:
+- Pets not allowed
+
+Cancellation:
+- Free cancellation up to 24 hours before check-in
+- One-night charge within 24 hours
+- No-shows charged full amount
+
+Payment:
+- Advance payment at booking or 48 hrs before check-in
+- Cash, UPI, Credit/Debit Cards
+
+Dining:
+- In-house restaurant under renovation
+- Online food orders available
+- No alcohol served
+
+Wi-Fi:
+- Complimentary high-speed Wi-Fi
+
+Wellness:
+- Ayurvedic massage with advance booking
+- Doctor-supervised treatments
+
+Parking:
+- Secure parking
+- Valet available on request
+
+General Terms:
+- Valid government ID required
+- Damage charged to guest
+- Smoking only in designated areas
+- Management reserves right to refuse service
+
+Privacy Summary:
+- Guest data used only for booking
+- Not shared with third parties
+- Data correction/deletion via info@whv-residency.com

@@ -96,6 +96,18 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
                 <p className="text-sm text-muted-foreground whitespace-pre-line leading-relaxed">
                   {room.description}
                 </p>
+                {room.roomNumbers && (
+                  <div className="mt-4">
+                    <h5 className="text-xs font-bold uppercase tracking-widest text-white mb-2">Room Numbers</h5>
+                    <div className="flex gap-2">
+                      {room.roomNumbers.map(num => (
+                        <span key={num} className="px-2 py-0.5 bg-primary/10 text-primary rounded text-xs font-bold">
+                          {num}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="space-y-6">
@@ -116,7 +128,7 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
                 <div>
                   <h4 className="font-display font-semibold text-white border-b border-white/10 pb-2 mb-4">Room Facilities</h4>
                   <ul className="grid grid-cols-2 gap-y-2 gap-x-4">
-                    {room.features?.slice(0, 10).map((feature, idx) => (
+                    {room.features?.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-xs text-muted-foreground">
                         <Check className="h-3 w-3 text-primary shrink-0" />
                         <span className="truncate">{feature}</span>

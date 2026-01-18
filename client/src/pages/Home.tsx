@@ -264,10 +264,112 @@ function RoomsSection() {
 // --- SERVICES SECTION ---
 function ServicesSection() {
   const services = [
-    { id: "dining", title: "Fine Dining", content: "Experience culinary masterpieces at our in-house restaurant featuring local and international cuisines. Breakfast buffet available daily from 7 AM - 10 AM.", icon: Utensils },
-    { id: "wifi", title: "High-Speed Wi-Fi", content: "Stay connected with complimentary high-speed internet access available throughout the property, including rooms and common areas.", icon: Wifi },
-    { id: "parking", title: "Valet Parking", content: "Secure, complimentary valet parking available for all guests. EV charging stations are also available upon request.", icon: Car },
-    { id: "policies", title: "Hotel Policies", content: "Check-in: 2:00 PM | Check-out: 11:00 AM. Pets are allowed in designated rooms only. Cancellation required 48 hours prior to arrival for full refund.", icon: Shield },
+    { 
+      id: "checkin", 
+      title: "Check-in & Check-out", 
+      content: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Check-in: 14:00 hrs</li>
+          <li>Check-out: 12:00 noon</li>
+          <li>Early/late check-in subject to availability</li>
+        </ul>
+      ), 
+      icon: CheckCircle2 
+    },
+    { 
+      id: "pets", 
+      title: "Pets", 
+      content: "Pets not allowed", 
+      icon: HeartHandshake 
+    },
+    { 
+      id: "cancellation", 
+      title: "Cancellation", 
+      content: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Free cancellation up to 24 hours before check-in</li>
+          <li>One-night charge within 24 hours</li>
+          <li>No-shows charged full amount</li>
+        </ul>
+      ), 
+      icon: Shield 
+    },
+    { 
+      id: "payment", 
+      title: "Payment", 
+      content: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Advance payment at booking or 48 hrs before check-in</li>
+          <li>Cash, UPI, Credit/Debit Cards</li>
+        </ul>
+      ), 
+      icon: CheckCircle2 
+    },
+    { 
+      id: "dining", 
+      title: "Dining", 
+      content: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>In-house restaurant under renovation</li>
+          <li>Online food orders available</li>
+          <li>No alcohol served</li>
+        </ul>
+      ), 
+      icon: Utensils 
+    },
+    { 
+      id: "wifi", 
+      title: "Wi-Fi", 
+      content: "Complimentary high-speed Wi-Fi", 
+      icon: Wifi 
+    },
+    { 
+      id: "wellness", 
+      title: "Wellness", 
+      content: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Ayurvedic massage with advance booking</li>
+          <li>Doctor-supervised treatments</li>
+        </ul>
+      ), 
+      icon: HeartHandshake 
+    },
+    { 
+      id: "parking", 
+      title: "Parking", 
+      content: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Secure parking</li>
+          <li>Valet available on request</li>
+        </ul>
+      ), 
+      icon: Car 
+    },
+    { 
+      id: "terms", 
+      title: "General Terms", 
+      content: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Valid government ID required</li>
+          <li>Damage charged to guest</li>
+          <li>Smoking only in designated areas</li>
+          <li>Management reserves right to refuse service</li>
+        </ul>
+      ), 
+      icon: Shield 
+    },
+    { 
+      id: "privacy", 
+      title: "Privacy Summary", 
+      content: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Guest data used only for booking</li>
+          <li>Not shared with third parties</li>
+          <li>Data correction/deletion via info@whv-residency.com</li>
+        </ul>
+      ), 
+      icon: Shield 
+    },
   ];
 
   return (
@@ -275,10 +377,10 @@ function ServicesSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-             <span className="text-primary font-display font-medium tracking-widest uppercase mb-2 block">Amenities</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">Designed for Your Comfort</h2>
+             <span className="text-primary font-display font-medium tracking-widest uppercase mb-2 block">Guest Services</span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">Policies & Services</h2>
             <p className="text-muted-foreground mb-8">
-              We have thoughtfully curated every aspect of your stay to ensure you have everything you need right at your fingertips.
+              We aim to provide a transparent and comfortable experience for all our guests. Please review our policies and available services.
             </p>
             {/* Service Image */}
             <div className="rounded-lg overflow-hidden h-[300px] border border-white/10 relative group">
@@ -288,7 +390,7 @@ function ServicesSection() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute bottom-6 left-6 text-white font-display text-2xl font-bold">World Class Dining</div>
+              <div className="absolute bottom-6 left-6 text-white font-display text-2xl font-bold">Premium Hospitality</div>
             </div>
           </div>
 
@@ -296,15 +398,15 @@ function ServicesSection() {
             <Accordion type="single" collapsible className="w-full">
               {services.map((service) => (
                 <AccordionItem key={service.id} value={service.id} className="border-b border-white/10">
-                  <AccordionTrigger className="hover:no-underline py-6">
+                  <AccordionTrigger className="hover:no-underline py-4">
                     <div className="flex items-center gap-4 text-left">
                       <div className="p-2 bg-white/5 rounded text-primary">
                         <service.icon className="h-5 w-5" />
                       </div>
-                      <span className="text-xl font-display text-white">{service.title}</span>
+                      <span className="text-lg font-display text-white">{service.title}</span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-base leading-relaxed pl-14 pb-6">
+                  <AccordionContent className="text-muted-foreground text-base leading-relaxed pl-14 pb-4">
                     {service.content}
                   </AccordionContent>
                 </AccordionItem>
