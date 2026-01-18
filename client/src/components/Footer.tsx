@@ -67,10 +67,16 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-display font-semibold text-primary mb-6">Follow Us</h4>
             <div className="flex gap-4">
-              {[Facebook, Instagram, Twitter].map((Icon, i) => (
+              {[
+                { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61583144679550" },
+                { Icon: Instagram, href: "https://www.instagram.com/whviewresidency" },
+                { Icon: Twitter, href: "#" }
+              ].map(({ Icon, href }, i) => (
                 <a 
                   key={i} 
-                  href="#" 
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-black hover:border-primary transition-all duration-300"
                 >
                   <Icon className="h-5 w-5" />
