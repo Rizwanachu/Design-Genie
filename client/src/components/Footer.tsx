@@ -31,9 +31,9 @@ export function Footer() {
                   Home
                 </button>
               </li>
-              {["Rooms", "Explore", "Services", "Gallery", "Contact"].map((item) => (
+              {["Rooms", "Explore", "Policies & Services", "Gallery", "Contact"].map((item) => (
                 <li key={item}>
-                  <a href={item === "Explore" ? "#nearby" : `#${item.toLowerCase()}`} className="text-muted-foreground hover:text-primary transition-colors">
+                  <a href={item === "Explore" ? "#nearby" : item === "Policies & Services" ? "#services" : `#${item.toLowerCase()}`} className="text-muted-foreground hover:text-primary transition-colors">
                     {item}
                   </a>
                 </li>
