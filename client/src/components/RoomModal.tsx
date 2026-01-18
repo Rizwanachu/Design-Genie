@@ -40,9 +40,6 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
           <div className="md:w-1/2 p-6 md:p-8 flex flex-col gap-6">
             <DialogHeader className="hidden md:block">
               <DialogTitle className="text-3xl font-display text-primary">{room.name}</DialogTitle>
-              <DialogDescription className="text-lg text-muted-foreground mt-2">
-                {room.price ? `Starts from ₹${(room.price / 100).toLocaleString()}/night` : 'Price available on request'}
-              </DialogDescription>
             </DialogHeader>
 
             <div className="grid grid-cols-3 gap-4 py-4 border-y border-white/10">

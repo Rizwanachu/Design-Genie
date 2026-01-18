@@ -218,9 +218,6 @@ function RoomsSection() {
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
                     <div className="text-sm text-muted-foreground">{room.size} Sq Ft</div>
-                    <div className="font-display font-bold text-primary text-lg">
-                      {room.price ? `₹${(room.price / 100).toLocaleString()}` : 'Contact for Price'}
-                    </div>
                   </div>
 
                   <p className="text-muted-foreground text-sm mb-6 line-clamp-2">{room.description}</p>
