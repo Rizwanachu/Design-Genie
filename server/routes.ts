@@ -12,16 +12,16 @@ async function seedDatabase() {
     await storage.createRoom({
       name: "Premium King Room",
       slug: "premium-king",
-      description: "Experience unmatched luxury with our AI-powered king-size bed featuring massage functionality, premium pillow options, smart controls, and a serene river view.",
-      size: "34 sqm",
-      beds: "1 King Bed",
+      description: "Experience unparalleled luxury and comfort in our Premium King Room, designed for travelers who seek sophistication and relaxation.\n\nUnmatched Comfort and Style\n\nAI-Powered King-Size Bed: Adjustable height and customizable head/foot positioning with a built-in full-body massage function for the ultimate relaxation experience.\nTailored Rest: Select from 5 premium pillow options to ensure your perfect night’s sleep.\nExclusive Massage Functionality: A special head and back massaging bed adds an extra touch of luxury.\n\nModern Amenities for a Seamless Stay\n\nFully Air-Conditioned Room: Enjoy a cool, refreshing ambiance.\nAdvanced Controls: Touch-screen panels for effortless control of lighting, temperature, and entertainment.\nPremium Sound System: Elevate your experience with high-quality music and entertainment.\n\nHygienic and Practical Bathroom\n\nCleanliness Redefined: Separate WC, shower, hand-wash area, and neatly arranged bath linens ensure a premium, hygienic experience.\nStunning River View: Soak in the breathtaking Willingdon Island River View, offering a tranquil escape from the everyday.\n\nWhether you're traveling for business or leisure, the Premium King Room promises an unforgettable stay.\n\nRoom No: 105 & 210",
+      size: "34sqm",
+      beds: "1",
       bathrooms: 1,
       adults: 2,
       children: 2,
       view: "River View",
       price: 15000, // Example price
       roomNumbers: ["105", "210"],
-      features: ["Breakfast Included", "Flat TV", "Hairdryer", "Writing Desk", "Towel Warmer", "Bathtub", "Balcony", "Ironing Board", "Kettle", "Telephone", "Safe"],
+      features: ["Breakfast Included", "Flat Screen TV", "Hairdryer", "Writing Desk", "Towel Warmer", "Shower bathtub", "Balcony or Terrace", "Ironing Board", "Kettle Tea", "Telephone", "Saving Safe", "Transportations", "Rules & Regulations", "Check-in: After 02:00pm", "Checkout: Before 11:00am", "Late Checkout: Additional charge 50% of the room rate", "No smoking inside the room and No pets", "Identification document is must for hotel registration"],
       imageUrl: "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1000&auto=format&fit=crop",
     });
 

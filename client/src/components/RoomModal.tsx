@@ -61,7 +61,14 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-display font-semibold text-white">Room Features</h4>
+              <h4 className="font-display font-semibold text-white">Room Details</h4>
+              <p className="text-sm text-muted-foreground whitespace-pre-line">
+                {room.description}
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="font-display font-semibold text-white">Room Facilities</h4>
               <ul className="grid grid-cols-1 gap-2">
                 {room.features?.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-sm text-muted-foreground">
