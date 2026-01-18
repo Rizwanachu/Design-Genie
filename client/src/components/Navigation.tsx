@@ -28,6 +28,10 @@ export function Navigation() {
 
   const scrollToSection = (id: string) => {
     setIsOpen(false);
+    if (id === "#hero") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
     const element = document.querySelector(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

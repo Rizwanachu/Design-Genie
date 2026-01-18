@@ -23,7 +23,15 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-display font-semibold text-primary mb-6">Quick Links</h4>
             <ul className="space-y-4">
-              {["Home", "Rooms", "Services", "Gallery", "Contact"].map((item) => (
+              <li>
+                <button 
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Home
+                </button>
+              </li>
+              {["Rooms", "Services", "Gallery", "Contact"].map((item) => (
                 <li key={item}>
                   <a href={`#${item.toLowerCase()}`} className="text-muted-foreground hover:text-primary transition-colors">
                     {item}
