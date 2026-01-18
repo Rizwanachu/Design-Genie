@@ -51,7 +51,7 @@ export function Navigation() {
             }}
             className="flex items-center gap-2 group"
           >
-            <div className="bg-white/90 p-1.5 rounded-sm transition-transform group-hover:scale-105">
+            <div className="p-1.5 rounded-sm transition-transform group-hover:scale-105 bg-[#ffffff00] text-[#a6a6a600]">
               <img src={logo} alt="W & H View Residency" className="h-8 md:h-10 w-auto object-contain" />
             </div>
             <span className={`text-xl font-display font-bold tracking-wider ${scrolled ? 'text-white' : 'text-white text-shadow'}`}>
@@ -90,7 +90,6 @@ export function Navigation() {
           </button>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
