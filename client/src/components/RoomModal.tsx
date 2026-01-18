@@ -33,15 +33,17 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl bg-card border-white/10 text-card-foreground p-0 overflow-hidden max-h-[90vh] flex flex-col sm:my-8">
-        <DialogClose className="absolute right-4 top-4 z-50 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 transition-colors focus:outline-none">
-          <X className="h-5 w-5" />
-          <span className="sr-only">Close</span>
-        </DialogClose>
-        
+      <DialogContent className="max-w-4xl bg-card border-white/10 text-card-foreground p-0 overflow-hidden max-h-[90vh] flex flex-col sm:my-8 [&>button]:hidden">
         <div className="flex flex-col overflow-y-auto">
           {/* Virtual Tour / Gallery Section */}
           <div className="relative h-64 md:h-[400px] w-full bg-black shrink-0">
+            <button 
+              onClick={onClose}
+              className="absolute right-4 top-4 z-50 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 transition-colors focus:outline-none"
+            >
+              <X className="h-5 w-5" />
+              <span className="sr-only">Close</span>
+            </button>
             <img 
               src={images[currentImageIndex]} 
               alt={`${room.name} View ${currentImageIndex + 1}`} 
