@@ -203,6 +203,7 @@ export function BookingModal({ room, isOpen, onClose }: BookingModalProps) {
                       placeholder="Any specific requirements?" 
                       className="bg-background border-border min-h-[80px]" 
                       {...field} 
+                      value={field.value || ""}
                     />
                   </FormControl>
                   <FormMessage />
