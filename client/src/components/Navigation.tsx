@@ -116,14 +116,14 @@ export function Navigation() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm h-screen w-screen"
             />
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute top-0 right-0 h-full w-[280px] bg-[#121212] flex flex-col p-6 shadow-2xl"
+              className="absolute top-0 right-0 h-screen w-[280px] bg-[#121212] flex flex-col p-6 shadow-2xl"
             >
               <div className="flex justify-end mb-8">
                 <button
@@ -147,7 +147,7 @@ export function Navigation() {
                 ))}
               </div>
               
-              <div className="mt-auto pt-6">
+              <div className="mt-auto pt-6 pb-8">
                 <a href="tel:+918129468888" className="block w-full">
                   <Button 
                     size="lg"
