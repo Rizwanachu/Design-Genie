@@ -206,13 +206,13 @@ function RoomsSection() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-64 overflow-hidden room-card-container">
                   <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
                     <button 
                       onClick={(e) => {
                         e.stopPropagation();
                         const gallery = room.gallery && room.gallery.length > 0 ? room.gallery : [room.imageUrl];
-                        const container = e.currentTarget.closest('.room-image-container');
+                        const container = e.currentTarget.closest('.room-card-container');
                         const img = container?.querySelector('img');
                         if (img) {
                           const currentSrc = img.getAttribute('src');
@@ -229,7 +229,7 @@ function RoomsSection() {
                       onClick={(e) => {
                         e.stopPropagation();
                         const gallery = room.gallery && room.gallery.length > 0 ? room.gallery : [room.imageUrl];
-                        const container = e.currentTarget.closest('.room-image-container');
+                        const container = e.currentTarget.closest('.room-card-container');
                         const img = container?.querySelector('img');
                         if (img) {
                           const currentSrc = img.getAttribute('src');
@@ -243,7 +243,7 @@ function RoomsSection() {
                       <ChevronRight className="h-5 w-5" />
                     </button>
                   </div>
-                  <div className="room-image-container w-full h-full">
+                  <div className="w-full h-full">
                     <img 
                       src={room.imageUrl} 
                       alt={room.name} 
