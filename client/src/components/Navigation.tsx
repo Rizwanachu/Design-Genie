@@ -124,6 +124,7 @@ export function Navigation() {
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
               className="fixed top-0 right-0 h-full w-[280px] bg-[#121212] lg:hidden z-[100] flex flex-col p-6 shadow-2xl"
+              style={{ backgroundColor: "#121212", opacity: 1 }}
             >
               <div className="flex justify-end mb-8">
                 <button
