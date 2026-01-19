@@ -58,7 +58,7 @@ export function Navigation() {
             className="flex items-center gap-2 group"
           >
             <div className="p-1.5 rounded-sm transition-transform group-hover:scale-105 bg-[#ffffff00] text-[#a6a6a600]">
-              <img src={scrolled ? logoScrolled : logo} alt="W & H View Residency" className="h-[80px] w-[80px] object-contain transition-all duration-300" />
+              <img src={scrolled ? logoScrolled : logo} alt="W & H View Residency" className="h-[70px] w-[70px] object-contain transition-all duration-300" />
             </div>
           </a>
 
