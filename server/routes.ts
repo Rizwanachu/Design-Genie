@@ -4,106 +4,7 @@ import { storage } from "./storage";
 import { api } from "@shared/routes";
 import { z } from "zod";
 import { insertBookingRequestSchema, insertInquirySchema } from "@shared/schema";
-import nodemailer from "nodemailer";
 
-// Simple mail transporter
-// Note: For production, use a proper email service like SendGrid, Resend, or Amazon SES.
-// Since this is a request for a specific email, we'll implement a basic structure.
-// Users will need to provide their own SMTP credentials as environment variables.
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || "smtp.gmail.com",
-  port: parseInt(process.env.SMTP_PORT || "587"),
-  secure: process.env.SMTP_SECURE === "true",
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
-
-async function sendInquiryEmail(data: any) {
-  if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    console.warn("SMTP credentials not set. Email not sent.");
-    return;
-  }
-
-  const mailOptions = {
-    from: process.env.SMTP_USER,
-    to: "info@whv-residency.com",
-    subject: `New Inquiry: ${data.subject || "No Subject"}`,
-    text: `
-      Name: ${data.name}
-      Phone: ${data.phone}
-      Email: ${data.email}
-      Subject: ${data.subject || "N/A"}
-      
-      Message:
-      ${data.message}
-    `,
-    html: `
-      <h2>New Contact Inquiry</h2>
-      <p><strong>Name:</strong> ${data.name}</p>
-      <p><strong>Phone:</strong> ${data.phone}</p>
-      <p><strong>Email:</strong> ${data.email}</p>
-      <p><strong>Subject:</strong> ${data.subject || "N/A"}</p>
-      <br>
-      <p><strong>Message:</strong></p>
-      <p>${data.message.replace(/\n/g, '<br>')}</p>
-    `,
-  };
-
-  try {
-    await transporter.sendMail(mailOptions);
-    console.log("Inquiry email sent to info@whv-residency.com");
-  } catch (error) {
-    console.error("Error sending inquiry email:", error);
-  }
-}
-
-async function sendBookingEmail(data: any) {
-  if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    console.warn("SMTP credentials not set. Email not sent.");
-    return;
-  }
-
-  const mailOptions = {
-    from: process.env.SMTP_USER,
-    to: "info@whv-residency.com",
-    subject: `New Booking Request: ${data.roomName}`,
-    text: `
-      New Booking Request for ${data.roomName}
-      
-      Check-in: ${data.checkIn}
-      Check-out: ${data.checkOut}
-      Adults: ${data.adults}
-      Children: ${data.children}
-      
-      Guest Name: ${data.name}
-      Email: ${data.email}
-      Phone: ${data.phone}
-      Special Requests: ${data.specialRequests || "None"}
-    `,
-    html: `
-      <h2>New Booking Request</h2>
-      <p><strong>Room:</strong> ${data.roomName}</p>
-      <p><strong>Check-in:</strong> ${data.checkIn}</p>
-      <p><strong>Check-out:</strong> ${data.checkOut}</p>
-      <p><strong>Adults:</strong> ${data.adults}</p>
-      <p><strong>Children:</strong> ${data.children}</p>
-      <br>
-      <p><strong>Guest Name:</strong> ${data.name}</p>
-      <p><strong>Email:</strong> ${data.email}</p>
-      <p><strong>Phone:</strong> ${data.phone}</p>
-      <p><strong>Special Requests:</strong> ${data.specialRequests || "None"}</p>
-    `,
-  };
-
-  try {
-    await transporter.sendMail(mailOptions);
-    console.log("Booking email sent to info@whv-residency.com");
-  } catch (error) {
-    console.error("Error sending booking email:", error);
-  }
-}
 async function seedDatabase() {
   const existingRooms = await storage.getRooms();
   if (existingRooms.length === 0) {
@@ -198,14 +99,6 @@ export async function registerRoutes(
     try {
       const input = insertBookingRequestSchema.parse(req.body);
       const booking = await storage.createBookingRequest(input);
-      
-      // Send email notification
-      const room = await storage.getRoom(input.roomId);
-      sendBookingEmail({
-        ...input,
-        roomName: room?.name || "Unknown Room"
-      });
-
       res.status(201).json({ message: "Booking request received", id: booking.id });
     } catch (err) {
       if (err instanceof z.ZodError) {
@@ -220,10 +113,6 @@ export async function registerRoutes(
     try {
       const input = insertInquirySchema.parse(req.body);
       const inquiry = await storage.createInquiry(input);
-      
-      // Send email notification
-      sendInquiryEmail(input);
-
       res.status(201).json({ message: "Inquiry received", id: inquiry.id });
     } catch (err) {
       if (err instanceof z.ZodError) {
