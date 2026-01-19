@@ -12,7 +12,6 @@ export function Footer() {
               <div className="p-1 rounded-sm bg-[#292a3100] text-[#fafafa00]">
                 <img src={logo} alt="Logo" className="h-8 w-auto" />
               </div>
-              <span className="text-xl font-display font-bold text-white tracking-widest">W & H VIEW</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
               Experience the perfect blend of luxury and comfort. Your sanctuary away from home, where every detail is crafted for your peace of mind.
