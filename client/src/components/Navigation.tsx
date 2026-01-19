@@ -123,7 +123,7 @@ export function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[280px] bg-background z-50 flex flex-col p-6 shadow-2xl lg:hidden"
+              className="fixed top-0 right-0 h-full w-[280px] bg-background lg:hidden z-50 flex flex-col p-6 shadow-2xl"
             >
               <div className="flex justify-end mb-8">
                 <button
