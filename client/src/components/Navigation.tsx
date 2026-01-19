@@ -85,8 +85,11 @@ export function Navigation() {
 
           {/* Mobile Toggle */}
           <button
-            className="lg:hidden text-white p-2"
+            className={`lg:hidden p-2 transition-colors ${
+              scrolled ? "text-foreground" : "text-white"
+            }`}
             onClick={() => setIsOpen(true)}
+            data-testid="button-menu-open"
           >
             <Menu className="h-6 w-6" />
           </button>
@@ -95,39 +98,55 @@ export function Navigation() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "tween" }}
-            className="fixed inset-0 bg-background z-50 flex flex-col items-center justify-center space-y-8"
-          >
-            <button
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6 text-muted-foreground hover:text-foreground p-2"
+              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 lg:hidden"
+            />
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 h-full w-[280px] bg-background z-50 flex flex-col p-6 shadow-2xl lg:hidden"
             >
-              <X className="h-8 w-8" />
-            </button>
+              <div className="flex justify-end mb-8">
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="text-muted-foreground hover:text-foreground p-2"
+                  data-testid="button-menu-close"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
 
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className="text-2xl font-display font-light text-foreground hover:text-primary transition-colors"
-              >
-                {link.name}
-              </button>
-            ))}
-            
-            <a href="tel:+918129468888" className="mt-8">
-              <Button 
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 text-lg font-display"
-              >
-                Book Your Stay
-              </Button>
-            </a>
-          </motion.div>
+              <div className="flex flex-col space-y-4">
+                {navLinks.map((link) => (
+                  <button
+                    key={link.name}
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-lg font-display font-light text-foreground hover:text-primary transition-colors text-left py-2 border-b border-border/50"
+                  >
+                    {link.name}
+                  </button>
+                ))}
+              </div>
+              
+              <div className="mt-auto pt-6">
+                <a href="tel:+918129468888" className="block w-full">
+                  <Button 
+                    size="lg"
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-display tracking-widest uppercase text-sm"
+                  >
+                    Book Now
+                  </Button>
+                </a>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>
