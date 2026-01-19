@@ -135,7 +135,7 @@ export function Navigation() {
                 </button>
               </div>
 
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col space-y-4 bg-[#121212]">
                 {navLinks.map((link) => (
                   <button
                     key={link.name}
