@@ -1,28 +1,21 @@
 import { useQuery } from "@tanstack/react-query";
-import { api, buildUrl } from "@shared/routes";
+import { type Room } from "@shared/schema";
+import { roomsData } from "@/data/rooms";
 
 export function useRooms() {
   return useQuery({
-    queryKey: [api.rooms.list.path],
+    queryKey: ["/api/rooms"],
     queryFn: async () => {
-      const res = await fetch(api.rooms.list.path, { credentials: "include" });
-      if (!res.ok) throw new Error("Failed to fetch rooms");
-      return api.rooms.list.responses[200].parse(await res.json());
+      return roomsData;
     },
   });
 }
 
 export function useRoom(slug: string) {
   return useQuery({
-    queryKey: [api.rooms.get.path, slug],
+    queryKey: ["/api/rooms", slug],
     queryFn: async () => {
-      const url = buildUrl(api.rooms.get.path, { slug });
-      const res = await fetch(url, { credentials: "include" });
-      if (!res.ok) {
-        if (res.status === 404) return null;
-        throw new Error("Failed to fetch room");
-      }
-      return api.rooms.get.responses[200].parse(await res.json());
+      return roomsData.find(r => r.slug === slug) || null;
     },
     enabled: !!slug,
   });
