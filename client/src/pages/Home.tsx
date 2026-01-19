@@ -24,6 +24,8 @@ import { Form, FormField, FormItem, FormControl, FormMessage, FormLabel } from "
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Skeleton } from "@/components/ui/skeleton";
 
+import heroStockImage from '@assets/stock_images/luxury_hotel_dark_mo_26d529bb.jpg';
+
 // --- HERO SECTION ---
 function HeroSection() {
   return (
@@ -31,11 +33,11 @@ function HeroSection() {
       {/* Background Image - Luxury Hotel Interior/Exterior */}
       <div className="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop" 
+          src={heroStockImage} 
           alt="Luxury Hotel" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-background" />
       </div>
 
       <div className="relative h-full container mx-auto px-4 md:px-6 flex flex-col justify-center items-center text-center">
