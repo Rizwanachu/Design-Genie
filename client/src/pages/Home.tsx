@@ -141,8 +141,8 @@ function AboutSection() {
              {/* Abstract interior or architectural detail */}
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden border border-white/10">
               <img 
-                src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format&fit=crop" 
-                alt="Interior" 
+                src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2070&auto=format&fit=crop" 
+                alt="Luxury Hotel Interior" 
                 className="w-full h-full object-cover"
               />
               {/* Decorative Frame */}
