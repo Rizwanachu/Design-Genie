@@ -53,7 +53,7 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
         scrolled ? "glass py-2" : "bg-transparent py-6"
       }`}
     >
@@ -107,23 +107,23 @@ export function Navigation() {
           </button>
         </div>
       </div>
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <>
+          <div className="fixed inset-0 z-[110] lg:hidden">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 lg:hidden"
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             />
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[280px] bg-[#121212] lg:hidden z-[60] flex flex-col p-6 shadow-2xl"
+              className="absolute top-0 right-0 h-full w-[280px] bg-[#121212] flex flex-col p-6 shadow-2xl"
             >
               <div className="flex justify-end mb-8">
                 <button
@@ -158,7 +158,7 @@ export function Navigation() {
                 </a>
               </div>
             </motion.div>
-          </>
+          </div>
         )}
       </AnimatePresence>
     </nav>
