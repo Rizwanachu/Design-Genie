@@ -53,9 +53,9 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? "glass py-2" : "bg-transparent py-6"
-      } ${isOpen ? "z-[101]" : "z-50"}`}
+      }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
@@ -123,8 +123,7 @@ export function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[280px] bg-[#121212] lg:hidden z-[100] flex flex-col p-6 shadow-2xl"
-              style={{ backgroundColor: "#121212", opacity: 1 }}
+              className="fixed top-0 right-0 h-full w-[280px] bg-[#121212] lg:hidden z-50 flex flex-col p-6 shadow-2xl"
             >
               <div className="flex justify-end mb-8">
                 <button
