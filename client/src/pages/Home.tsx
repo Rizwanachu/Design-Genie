@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { 
   Wifi, Car, Utensils, Shield, HeartHandshake, Wind, 
-  MapPin, Phone, Mail, ChevronDown, CheckCircle2 
+  MapPin, Phone, Mail, ChevronDown, CheckCircle2,
+  ChevronLeft, ChevronRight
 } from "lucide-react";
 
 import { useRooms } from "@/hooks/use-rooms";
@@ -206,13 +207,51 @@ function RoomsSection() {
                 transition={{ delay: idx * 0.1 }}
               >
                 <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={room.imageUrl} 
-                    alt={room.name} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
-                  <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                  <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        const gallery = room.gallery && room.gallery.length > 0 ? room.gallery : [room.imageUrl];
+                        const container = e.currentTarget.closest('.room-image-container');
+                        const img = container?.querySelector('img');
+                        if (img) {
+                          const currentSrc = img.getAttribute('src');
+                          const currentIndex = gallery.indexOf(currentSrc || '');
+                          const prevIndex = (currentIndex - 1 + gallery.length) % gallery.length;
+                          img.setAttribute('src', gallery[prevIndex]);
+                        }
+                      }}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1 rounded-full transition-colors"
+                    >
+                      <ChevronLeft className="h-5 w-5" />
+                    </button>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        const gallery = room.gallery && room.gallery.length > 0 ? room.gallery : [room.imageUrl];
+                        const container = e.currentTarget.closest('.room-image-container');
+                        const img = container?.querySelector('img');
+                        if (img) {
+                          const currentSrc = img.getAttribute('src');
+                          const currentIndex = gallery.indexOf(currentSrc || '');
+                          const nextIndex = (currentIndex + 1) % gallery.length;
+                          img.setAttribute('src', gallery[nextIndex]);
+                        }
+                      }}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1 rounded-full transition-colors"
+                    >
+                      <ChevronRight className="h-5 w-5" />
+                    </button>
+                  </div>
+                  <div className="room-image-container w-full h-full">
+                    <img 
+                      src={room.imageUrl} 
+                      alt={room.name} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 pointer-events-none" />
+                  <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end pointer-events-none">
                     <div className="text-white font-bold font-display text-xl">{room.name}</div>
                   </div>
                 </div>
