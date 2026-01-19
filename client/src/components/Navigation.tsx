@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@assets/Logo2-black-1-2-2_1768773677477.png";
+import logoScrolled from "@assets/image_1768813235608.png";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -57,7 +58,7 @@ export function Navigation() {
             className="flex items-center gap-2 group"
           >
             <div className="p-1.5 rounded-sm transition-transform group-hover:scale-105 bg-[#ffffff00] text-[#a6a6a600]">
-              <img src={logo} alt="W & H View Residency" className="h-[60px] w-[60px] object-contain" />
+              <img src={scrolled ? logoScrolled : logo} alt="W & H View Residency" className="h-[60px] w-[60px] object-contain transition-all duration-300" />
             </div>
           </a>
 
