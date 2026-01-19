@@ -89,10 +89,12 @@ function HeroSection() {
 // --- ABOUT SECTION ---
 function AboutSection() {
   const features = [
-    { icon: Shield, title: "Hygiene", desc: "Top-tier cleanliness standards" },
-    { icon: Wind, title: "Peace", desc: "Tranquil environment away from noise" },
-    { icon: HeartHandshake, title: "Service", desc: "24/7 dedicated staff support" },
-    { icon: CheckCircle2, title: "Trust", desc: "Thousands of happy guests" },
+    { icon: Car, title: "Transportations", desc: "Convenient options to explore the city with ease." },
+    { icon: HeartHandshake, title: "SPA", desc: "Indulge in relaxation and rejuvenation at our luxurious spa." },
+    { icon: Wifi, title: "Fast Wifi", desc: "High-speed WiFi available throughout the hotel." },
+    { icon: Utensils, title: "Food & Drink", desc: "Kerala and Arabian delicacies delivered right to you." },
+    { icon: Shield, title: "Hygienic Rooms", desc: "Modern best-practices to ensure high safety and cleanliness." },
+    { icon: Wind, title: "Lake View", desc: "Amazing view of Willingdon Island and Harbor Bridge." },
   ];
 
   return (
@@ -105,13 +107,13 @@ function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-primary font-display font-medium tracking-widest uppercase mb-2 block">About Us</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">Redefining Luxury Hospitality</h2>
+            <span className="text-primary font-display font-medium tracking-widest uppercase mb-2 block">Who We Are</span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">Discover Our Story and Commitment to Excellence</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Nestled in the heart of nature, W & H View Residency offers more than just a place to sleep. We provide an experience—a harmonious blend of modern luxury and natural serenity.
+              At W&H View Residency, we are dedicated to delivering exceptional hospitality in Kochi. Our friendly team is committed to creating a welcoming atmosphere where every guest feels at home.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Whether you are here for a business retreat or a family vacation, our meticulously designed spaces ensure your stay is comfortable, memorable, and absolutely stress-free.
+              Our mission is to deliver exceptional hospitality and create memorable experiences for every guest. Discover unmatched comfort and luxury, where every detail is designed to enhance your stay.
             </p>
 
             <div className="grid grid-cols-2 gap-6">
