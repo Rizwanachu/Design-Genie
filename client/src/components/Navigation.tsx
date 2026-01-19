@@ -123,24 +123,24 @@ export function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[280px] bg-background lg:hidden z-50 flex flex-col p-6 shadow-2xl"
+              className="fixed top-0 right-0 h-full w-[280px] bg-[#121212] lg:hidden z-50 flex flex-col p-6 shadow-2xl"
             >
               <div className="flex justify-end mb-8">
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-muted-foreground hover:text-foreground p-2"
+                  className="text-white/70 hover:text-white p-2"
                   data-testid="button-menu-close"
                 >
                   <X className="h-6 w-6" />
                 </button>
               </div>
 
-              <div className="flex flex-col space-y-4 bg-[#121212]">
+              <div className="flex flex-col space-y-4">
                 {navLinks.map((link) => (
                   <button
                     key={link.name}
                     onClick={() => scrollToSection(link.href)}
-                    className="text-lg font-display font-light text-foreground hover:text-primary transition-colors text-left py-2 border-b border-border/50"
+                    className="text-lg font-display font-light text-white hover:text-primary transition-colors text-left py-2 border-b border-white/10"
                   >
                     {link.name}
                   </button>
