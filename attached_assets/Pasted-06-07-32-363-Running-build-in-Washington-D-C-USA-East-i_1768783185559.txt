@@ -1,0 +1,46 @@
+06:07:32.363 Running build in Washington, D.C., USA (East) – iad1
+06:07:32.366 Build machine configuration: 2 cores, 8 GB
+06:07:32.649 Cloning github.com/Rizwanachu/Design-Genie (Branch: main, Commit: 79e1c96)
+06:07:32.650 Previous build caches not available.
+06:07:33.191 Cloning completed: 542.000ms
+06:07:33.625 Running "vercel build"
+06:07:34.744 Vercel CLI 50.4.4
+06:07:35.249 Installing dependencies...
+06:07:44.634 
+06:07:44.635 added 476 packages in 9s
+06:07:44.636 
+06:07:44.636 76 packages are looking for funding
+06:07:44.636   run `npm fund` for details
+06:07:44.688 Running "npm run build"
+06:07:44.798 
+06:07:44.798 > rest-express@1.0.0 build
+06:07:44.798 > tsx script/build.ts
+06:07:44.799 
+06:07:46.617 building client...
+06:07:46.691 [36mvite v7.3.0 [32mbuilding client environment for production...[36m[39m
+06:07:46.961 transforming...
+06:07:51.631 [32m✓[39m 2194 modules transformed.
+06:07:52.035 rendering chunks...
+06:07:52.049 computing gzip size...
+06:07:52.073 [2m../dist/public/[22m[32mindex.html                                           [39m[1m[2m  2.01 kB[22m[1m[22m[2m │ gzip:   0.77 kB[22m
+06:07:52.074 [2m../dist/public/[22m[2massets/[22m[32mLogo2-black-1-2-2_1768773677477-Dtt-YEj4.png  [39m[1m[2m 77.93 kB[22m[1m[22m
+06:07:52.074 [2m../dist/public/[22m[2massets/[22m[35mindex-DK0Kj3Ax.css                            [39m[1m[2m 73.51 kB[22m[1m[22m[2m │ gzip:  12.02 kB[22m
+06:07:52.074 [2m../dist/public/[22m[2massets/[22m[36mindex-CV5j8x6O.js                             [39m[1m[33m591.22 kB[39m[22m[2m │ gzip: 183.31 kB[22m
+06:07:52.074 [32m✓ built in 5.15s[39m
+06:07:52.074 building server...
+06:07:52.074 [33m
+06:07:52.075 (!) Some chunks are larger than 500 kB after minification. Consider:
+06:07:52.075 - Using dynamic import() to code-split the application
+06:07:52.075 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+06:07:52.075 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+06:07:52.277 
+06:07:52.278   dist/index.cjs  1.0mb ⚠️
+06:07:52.278 
+06:07:52.280 ⚡ Done in 192ms
+06:07:52.409 Build Completed in /vercel/output [17s]
+06:07:52.437 Deploying outputs...
+06:07:54.453 Deployment completed
+06:07:55.351 Creating build cache...
+06:08:08.466 Created build cache: 13.114s
+06:08:08.467 Uploading build cache [74.93 MB]
+06:08:09.425 Build cache uploaded: 960.297ms
