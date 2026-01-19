@@ -21,6 +21,17 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
@@ -88,7 +99,7 @@ export function Navigation() {
           <button
             className={`lg:hidden p-2 transition-colors ${
               scrolled ? "text-foreground" : "text-white"
-            }`}
+            } bg-black/20 backdrop-blur-sm lg:bg-transparent rounded-full`}
             onClick={() => setIsOpen(true)}
             data-testid="button-menu-open"
           >
