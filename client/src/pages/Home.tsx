@@ -553,6 +553,15 @@ function NearbySection() {
       title: "Chinese Fishing Nets",
       distance: "1.2 km",
       description: "Iconic fixed cantilever fishing nets, especially beautiful at sunset.",
+      image: "https://images.unsplash.com/photo-1626014303757-6bcbe678228d?q=80&w=2070&auto=format&fit=crop",
+      category: "Landmark",
+      lat: 9.9686,
+      lng: 76.2411
+    },
+    {
+      title: "Fort Kochi Beach",
+      distance: "1.4 km",
+      description: "A serene beach perfect for evening walks and enjoying the sea breeze.",
       image: "https://images.unsplash.com/photo-1566373059005-7f5e1f0e42d7?q=80&w=2070&auto=format&fit=crop",
       category: "Landmark",
       lat: 9.9675,
