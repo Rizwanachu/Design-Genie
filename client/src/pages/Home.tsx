@@ -536,23 +536,31 @@ function NearbySection() {
       distance: "0.2 km",
       description: "A 16th-century synagogue known for its Chinese tiles and Belgian chandeliers.",
       image: "https://images.unsplash.com/photo-1548013146-72479768bbf4?q=80&w=2070&auto=format&fit=crop",
-      category: "Heritage"
+      category: "Heritage",
+      lat: 9.9575,
+      lng: 76.2594
     },
     {
       title: "Mattancherry Palace",
       distance: "0.4 km",
       description: "Also known as the Dutch Palace, featuring mural paintings and Cochin Rajas' portraits.",
       image: "https://images.unsplash.com/photo-1582510003544-2d095665039b?q=80&w=2070&auto=format&fit=crop",
-      category: "History"
+      category: "History",
+      lat: 9.9583,
+      lng: 76.2592
     },
     {
       title: "Chinese Fishing Nets",
       distance: "1.2 km",
       description: "Iconic fixed cantilever fishing nets, especially beautiful at sunset.",
       image: "https://images.unsplash.com/photo-1566373059005-7f5e1f0e42d7?q=80&w=2070&auto=format&fit=crop",
-      category: "Landmark"
+      category: "Landmark",
+      lat: 9.9675,
+      lng: 76.2428
     }
   ];
+
+  const [selectedLocation, setSelectedLocation] = useState(attractions[0]);
 
   return (
     <section id="nearby" className="py-24 bg-[#0A0A0A]">
@@ -568,11 +576,16 @@ function NearbySection() {
               {attractions.map((item, idx) => (
                 <motion.div 
                   key={idx}
-                  className="bg-card border border-white/5 p-4 rounded-lg hover:border-primary/50 transition-all cursor-pointer group"
+                  className={`border p-4 rounded-lg transition-all cursor-pointer group ${
+                    selectedLocation.title === item.title 
+                      ? "bg-primary/10 border-primary/50" 
+                      : "bg-card border-white/5 hover:border-primary/50"
+                  }`}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
+                  onClick={() => setSelectedLocation(item)}
                 >
                   <div className="flex justify-between items-start mb-2">
                     <span className="text-xs font-bold uppercase tracking-tighter text-primary">{item.category}</span>
@@ -588,7 +601,7 @@ function NearbySection() {
           <div className="lg:w-2/3">
             <div className="relative h-full min-h-[400px] rounded-lg overflow-hidden border border-white/10 flex flex-col">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7859.528617919352!2d76.258!3d9.954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sattractions%20near%20Mattancherry%2C%20Kochi!5e0!3m2!1sen!2sin!4v1768770256217!5m2!1sen!2sin" 
+                src={`https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3929.1!2d${selectedLocation.lng}!3d${selectedLocation.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1768770256217!5m2!1sen!2sin`}
                 className="w-full grow"
                 style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }} 
                 allowFullScreen 
@@ -596,6 +609,15 @@ function NearbySection() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
               <div className="absolute inset-0 pointer-events-none border-[12px] border-black/10" />
+              <div className="absolute top-4 left-4 right-4 bg-black/80 backdrop-blur-md border border-white/10 p-4 rounded flex items-center gap-4">
+                <div className="bg-primary/20 p-2 rounded">
+                  <MapPin className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <div className="text-white font-display font-bold text-sm">{selectedLocation.title}</div>
+                  <div className="text-muted-foreground text-xs">{selectedLocation.distance} from Residency</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
