@@ -415,10 +415,24 @@ function ServicesSection() {
     },
   ];
 
+  const additionalServices = [
+    {
+      title: "Kayaa Holistic Center",
+      description: "Experience professional Ayurvedic wellness and holistic healing at Kayaa Holistic Center.",
+      link: "https://kayaaholistic.com/",
+      image: "/assets/ayurvedic_spa_holist_8907cf1d.jpg"
+    },
+    {
+      title: "Airport Transfer",
+      description: "Convenient and reliable airport pickup and drop-off services for a stress-free journey.",
+      image: "/assets/luxury_airport_trans_c547bf81.jpg"
+    }
+  ];
+
   return (
     <section id="services" className="py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
           <div>
              <span className="text-primary font-display font-medium tracking-widest uppercase mb-2 block">Guest Services</span>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">Policies & Services</h2>
@@ -455,6 +469,58 @@ function ServicesSection() {
                 </AccordionItem>
               ))}
             </Accordion>
+          </div>
+        </div>
+
+        {/* Additional Services */}
+        <div className="pt-20 border-t border-white/5">
+          <div className="text-center mb-12">
+            <span className="text-primary font-display font-medium tracking-widest uppercase mb-2 block">Premium Add-ons</span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-white">Additional Services</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {additionalServices.map((service, idx) => (
+              <motion.div
+                key={idx}
+                className="group relative overflow-hidden rounded-lg border border-white/5 bg-card hover:border-primary/30 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                </div>
+                
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <h3 className="text-2xl font-display font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-muted-foreground mb-6 line-clamp-2 max-w-md">
+                    {service.description}
+                  </p>
+                  
+                  {service.link ? (
+                    <a 
+                      href={service.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-display font-bold tracking-widest uppercase text-sm border-b border-primary/30 pb-1"
+                    >
+                      Visit Website
+                    </a>
+                  ) : (
+                    <div className="text-xs font-display font-bold tracking-widest uppercase text-primary/60">
+                      Available on Request
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
