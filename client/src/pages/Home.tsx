@@ -428,7 +428,7 @@ function ServicesSection() {
             {/* Service Image */}
             <div className="rounded-lg overflow-hidden h-[300px] border border-white/10 relative group">
               <img 
-                src="/attached_assets/image_1768910772330.png" 
+                src="/assets/image_1768910772330.png" 
                 alt="Dining" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -541,12 +541,12 @@ function NearbySection() {
 // --- GALLERY SECTION ---
 function GallerySection() {
   const images = [
-    "/attached_assets/image_1768910147198.png",
-    "/attached_assets/image_1768910169247.png",
-    "/attached_assets/image_1768910180678.png",
-    "/attached_assets/image_1768910190709.png",
-    "/attached_assets/image_1768910772330.png",
-    "/attached_assets/image_1768780481805.png"
+    "/assets/image_1768910147198.png",
+    "/assets/image_1768910169247.png",
+    "/assets/image_1768910180678.png",
+    "/assets/image_1768910190709.png",
+    "/assets/image_1768910772330.png",
+    "/assets/image_1768780481805.png"
   ];
 
   return (

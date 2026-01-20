@@ -19,12 +19,12 @@ export const roomsData: Room[] = [
       "Towel Warmer", "Bathtub", "Balcony", "Ironing Board", 
       "Kettle", "Telephone", "Safe"
     ],
-    imageUrl: "/attached_assets/image_1768910147198.png",
+    imageUrl: "/assets/image_1768910147198.png",
     gallery: [
-      "/attached_assets/image_1768910147198.png",
-      "/attached_assets/image_1768910169247.png",
-      "/attached_assets/image_1768910180678.png",
-      "/attached_assets/image_1768910190709.png"
+      "/assets/image_1768910147198.png",
+      "/assets/image_1768910169247.png",
+      "/assets/image_1768910180678.png",
+      "/assets/image_1768910190709.png"
     ]
   },
   {
