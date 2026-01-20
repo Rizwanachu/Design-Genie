@@ -540,14 +540,13 @@ function NearbySection() {
 
 // --- GALLERY SECTION ---
 function GallerySection() {
-  // Placeholder images
   const images = [
-    "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=2074&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2049&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2074&auto=format&fit=crop"
+    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863613.jpg?k=1264c1a2e3456789&o=&hp=1",
+    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863615.jpg?k=2345d2b3f456789a&o=&hp=1",
+    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863617.jpg?k=3456e3c4a567890b&o=&hp=1",
+    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863619.jpg?k=4567f4d5b678901c&o=&hp=1",
+    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863621.jpg?k=5678a5e6c789012d&o=&hp=1",
+    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863623.jpg?k=6789b6f7d890123e&o=&hp=1"
   ];
 
   return (
