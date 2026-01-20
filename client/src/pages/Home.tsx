@@ -26,6 +26,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 import heroStockImage from '@assets/stock_images/luxury_hotel_dark_mo_26d529bb.jpg';
 
+import interiorStockImage from '@assets/stock_images/luxury_hotel_lobby_i_8a8af551.jpg';
+
 // --- HERO SECTION ---
 function HeroSection() {
   return (
@@ -141,11 +143,10 @@ function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-             {/* Abstract interior or architectural detail */}
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden border border-white/10">
               <img 
-                src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format&fit=crop" 
-                alt="Interior" 
+                src={interiorStockImage} 
+                alt="Luxury Lobby" 
                 className="w-full h-full object-cover"
               />
               {/* Decorative Frame */}
