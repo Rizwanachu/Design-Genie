@@ -537,8 +537,8 @@ function NearbySection() {
       description: "A 16th-century synagogue known for its Chinese tiles and Belgian chandeliers.",
       image: "https://images.unsplash.com/photo-1548013146-72479768bbf4?q=80&w=2070&auto=format&fit=crop",
       category: "Heritage",
-      lat: 9.9574448,
-      lng: 76.2592638
+      lat: 9.9575,
+      lng: 76.2594
     },
     {
       title: "Mattancherry Palace",
@@ -546,8 +546,8 @@ function NearbySection() {
       description: "Also known as the Dutch Palace, featuring mural paintings and Cochin Rajas' portraits.",
       image: "https://images.unsplash.com/photo-1582510003544-2d095665039b?q=80&w=2070&auto=format&fit=crop",
       category: "History",
-      lat: 9.9582773,
-      lng: 76.2593508
+      lat: 9.9583,
+      lng: 76.2592
     },
     {
       title: "Chinese Fishing Nets",
@@ -555,8 +555,8 @@ function NearbySection() {
       description: "Iconic fixed cantilever fishing nets, especially beautiful at sunset.",
       image: "https://images.unsplash.com/photo-1566373059005-7f5e1f0e42d7?q=80&w=2070&auto=format&fit=crop",
       category: "Landmark",
-      lat: 9.9683959,
-      lng: 76.2422419
+      lat: 9.9675,
+      lng: 76.2428
     }
   ];
 
@@ -601,7 +601,7 @@ function NearbySection() {
           <div className="lg:w-2/3">
             <div className="relative h-full min-h-[400px] rounded-lg overflow-hidden border border-white/10 flex flex-col">
               <iframe 
-                src={`https://maps.google.com/maps?q=${selectedLocation.lat},${selectedLocation.lng}&z=15&output=embed`}
+                src={`https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3929.1!2d${selectedLocation.lng}!3d${selectedLocation.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1768770256217!5m2!1sen!2sin`}
                 className="w-full grow"
                 style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }} 
                 allowFullScreen 
@@ -623,6 +623,8 @@ function NearbySection() {
         </div>
       </div>
     </section>
+  );
+}
 
 // --- GALLERY SECTION ---
 function GallerySection() {
