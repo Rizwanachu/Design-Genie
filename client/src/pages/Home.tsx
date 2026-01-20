@@ -541,12 +541,12 @@ function NearbySection() {
 // --- GALLERY SECTION ---
 function GallerySection() {
   const images = [
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863613.jpg?k=1264c1a2e3456789&o=&hp=1",
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863615.jpg?k=2345d2b3f456789a&o=&hp=1",
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863617.jpg?k=3456e3c4a567890b&o=&hp=1",
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863619.jpg?k=4567f4d5b678901c&o=&hp=1",
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863621.jpg?k=5678a5e6c789012d&o=&hp=1",
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498863623.jpg?k=6789b6f7d890123e&o=&hp=1"
+    "/attached_assets/image_1768910147198.png",
+    "/attached_assets/image_1768910169247.png",
+    "/attached_assets/image_1768910180678.png",
+    "/attached_assets/image_1768910190709.png",
+    "/attached_assets/image_1768910772330.png",
+    "/attached_assets/image_1768780481805.png"
   ];
 
   return (
