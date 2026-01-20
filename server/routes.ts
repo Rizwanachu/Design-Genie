@@ -26,7 +26,7 @@ async function seedDatabase() {
         "Towel Warmer", "Bathtub", "Balcony", "Ironing Board", 
         "Kettle", "Telephone", "Safe"
       ],
-      imageUrl: "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1000&auto=format&fit=crop",
+      imageUrl: "/attached_assets/image_1768910147198.png",
     });
 
     await storage.createRoom({
