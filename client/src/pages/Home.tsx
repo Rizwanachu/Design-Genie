@@ -601,7 +601,7 @@ function NearbySection() {
           <div className="lg:w-2/3">
             <div className="relative h-full min-h-[400px] rounded-lg overflow-hidden border border-white/10 flex flex-col">
               <iframe 
-                src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.1!2d${selectedLocation.lng}!3d${selectedLocation.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNTgnMDYuMiJOIDc2wrAxNCc0OC4xIkU!5e0!3m2!1sen!2sin!4v1768770256217!5m2!1sen!2sin&q=${selectedLocation.lat},${selectedLocation.lng}`}
+                src={`https://maps.google.com/maps?q=${selectedLocation.lat},${selectedLocation.lng}&z=15&output=embed`}
                 className="w-full grow"
                 style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }} 
                 allowFullScreen 
@@ -623,8 +623,6 @@ function NearbySection() {
         </div>
       </div>
     </section>
-  );
-}
 
 // --- GALLERY SECTION ---
 function GallerySection() {
