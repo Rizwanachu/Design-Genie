@@ -537,8 +537,8 @@ function NearbySection() {
       description: "A 16th-century synagogue known for its Chinese tiles and Belgian chandeliers.",
       image: "https://images.unsplash.com/photo-1548013146-72479768bbf4?q=80&w=2070&auto=format&fit=crop",
       category: "Heritage",
-      lat: 9.9575,
-      lng: 76.2594
+      lat: 9.9574448,
+      lng: 76.2592638
     },
     {
       title: "Mattancherry Palace",
@@ -546,8 +546,8 @@ function NearbySection() {
       description: "Also known as the Dutch Palace, featuring mural paintings and Cochin Rajas' portraits.",
       image: "https://images.unsplash.com/photo-1582510003544-2d095665039b?q=80&w=2070&auto=format&fit=crop",
       category: "History",
-      lat: 9.9583,
-      lng: 76.2592
+      lat: 9.9582773,
+      lng: 76.2593508
     },
     {
       title: "Chinese Fishing Nets",
