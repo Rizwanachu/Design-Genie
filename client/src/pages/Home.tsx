@@ -425,7 +425,7 @@ function ServicesSection() {
     {
       title: "Airport Transfer",
       description: "Convenient and reliable airport pickup and drop-off services for a stress-free journey.",
-      images: ["/assets/luxury_airport_trans_c547bf81.jpg", "/assets/luxury_sedan_airport_a531f0ca.jpg"]
+      image: "/assets/luxury_airport_trans_c547bf81.jpg"
     }
   ];
 
@@ -489,25 +489,13 @@ function ServicesSection() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <div className="aspect-[16/9] overflow-hidden flex gap-1">
-                  {service.images ? (
-                    service.images.map((img, i) => (
-                      <div key={i} className="flex-1 overflow-hidden">
-                        <img 
-                          src={img} 
-                          alt={`${service.title} ${i + 1}`} 
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
-                      </div>
-                    ))
-                  ) : (
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                 </div>
                 
                 <div className="absolute bottom-0 left-0 right-0 p-8">
