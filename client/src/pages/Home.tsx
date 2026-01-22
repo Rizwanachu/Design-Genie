@@ -25,6 +25,8 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Skeleton } from "@/components/ui/skeleton";
 
 import luxuryLobbyBg from '@/assets/luxury-lobby-bg.png';
+import ayurvedicSpaImg from '@assets/ayurvedic_spa_holist_8907cf1d.jpg';
+import premiumHospitalityImg from '@assets/image_1768910772330.png';
 
 // --- HERO SECTION ---
 function HeroSection() {
@@ -420,12 +422,12 @@ function ServicesSection() {
       title: "Kayaa Holistic Center",
       description: "Experience professional Ayurvedic wellness and holistic healing at Kayaa Holistic Center.",
       link: "https://kayaaholistic.com/",
-      image: "/assets/ayurvedic_spa_holist_8907cf1d.jpg"
+      image: ayurvedicSpaImg
     },
     {
       title: "Airport Transfer",
       description: "Convenient and reliable airport pickup and drop-off services for a stress-free journey.",
-      image: "/src/assets/images/cochin-airport.jpg"
+      image: "/assets/images/cochin-airport.jpg"
     }
   ];
 
@@ -442,7 +444,7 @@ function ServicesSection() {
             {/* Service Image */}
             <div className="rounded-lg overflow-hidden h-[300px] border border-white/10 relative group">
               <img 
-                src="/assets/image_1768910772330.png" 
+                src={premiumHospitalityImg} 
                 alt="Dining" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
