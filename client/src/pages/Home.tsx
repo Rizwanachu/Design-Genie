@@ -24,7 +24,7 @@ import { Form, FormField, FormItem, FormControl, FormMessage, FormLabel } from "
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Skeleton } from "@/components/ui/skeleton";
 
-import minimalistBg from '@/assets/minimalist-bg-v2.png';
+import minimalistBg from '@/assets/minimalist-bg-v3.png';
 
 // --- HERO SECTION ---
 function HeroSection() {
