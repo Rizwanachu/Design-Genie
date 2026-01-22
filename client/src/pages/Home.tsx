@@ -25,8 +25,8 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Skeleton } from "@/components/ui/skeleton";
 
 import luxuryLobbyBg from '@/assets/luxury-lobby-bg.png';
-import ayurvedicSpaImg from '@assets/ayurvedic_spa_holist_8907cf1d.jpg';
-import premiumHospitalityImg from '@assets/image_1768910772330.png';
+import ayurvedicSpaImg from '@/assets/ayurvedic_spa_holist_8907cf1d.jpg';
+import premiumHospitalityImg from '@/assets/image_1768910772330.png';
 
 // --- HERO SECTION ---
 function HeroSection() {
