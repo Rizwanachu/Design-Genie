@@ -442,8 +442,8 @@ function ServicesSection() {
             {/* Service Image */}
             <div className="rounded-lg overflow-hidden h-[300px] border border-white/10 relative group">
               <img 
-                src="/src/assets/images/luxury-room-v1.jpg" 
-                alt="Luxury Hotel Interior" 
+                src="/assets/image_1768910772330.png" 
+                alt="Dining" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/40" />
