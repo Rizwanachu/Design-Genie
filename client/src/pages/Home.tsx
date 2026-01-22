@@ -532,6 +532,15 @@ function ServicesSection() {
 function NearbySection() {
   const attractions = [
     {
+      title: "Paradesi Synagogue",
+      distance: "0.2 km",
+      description: "A 16th-century synagogue known for its Chinese tiles and Belgian chandeliers.",
+      image: "https://images.unsplash.com/photo-1548013146-72479768bbf4?q=80&w=2070&auto=format&fit=crop",
+      category: "Heritage",
+      lat: 9.9575,
+      lng: 76.2594
+    },
+    {
       title: "Mattancherry Palace",
       distance: "0.4 km",
       description: "Also known as the Dutch Palace, featuring mural paintings and Cochin Rajas' portraits.",
@@ -544,19 +553,10 @@ function NearbySection() {
       title: "Chinese Fishing Nets",
       distance: "1.2 km",
       description: "Iconic fixed cantilever fishing nets, especially beautiful at sunset.",
-      image: "https://images.unsplash.com/photo-1548013146-72479768bbf4?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1566373059005-7f5e1f0e42d7?q=80&w=2070&auto=format&fit=crop",
       category: "Landmark",
-      lat: 9.9667,
-      lng: 76.2417
-    },
-    {
-      title: "Fort Kochi Beach",
-      distance: "1.5 km",
-      description: "A tranquil beach offering stunning sunset views and a historical promenade.",
-      image: "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=2070&auto=format&fit=crop",
-      category: "Nature",
-      lat: 9.9642,
-      lng: 76.2361
+      lat: 9.9675,
+      lng: 76.2428
     }
   ];
 
