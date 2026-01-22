@@ -609,7 +609,7 @@ function NearbySection() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
               <div className="absolute inset-0 pointer-events-none border-[12px] border-black/10" />
-              <div className="absolute top-4 left-4 right-4 bg-black/80 backdrop-blur-md border border-white/10 p-4 rounded flex items-center gap-4">
+              <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-md border border-white/10 p-4 rounded flex items-center gap-4">
                 <div className="bg-primary/20 p-2 rounded">
                   <MapPin className="h-5 w-5 text-primary" />
                 </div>
