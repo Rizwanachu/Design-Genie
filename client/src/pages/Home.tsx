@@ -37,7 +37,7 @@ function HeroSection() {
           alt="Minimalist Background" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background" />
       </div>
 
       <div className="relative h-full container mx-auto px-4 md:px-6 flex flex-col justify-center items-center text-center">
