@@ -10,19 +10,28 @@ import {
 import { Button } from "@/components/ui/button";
 import { 
   Check, Users, BedDouble, Bath, ArrowRight, ChevronLeft, ChevronRight, X,
-  Tv, Shield, Wind, Wifi, Coffee, Smartphone, Snowflake, UtensilsCrossed
+  Tv, Shield, Wind, Wifi, Coffee, Smartphone, Snowflake, UtensilsCrossed,
+  Sunrise, Wind as Hairdryer, BookOpen, Thermometer, Bath as Bathtub, 
+  Shirt, Waves
 } from "lucide-react";
 
 const getFeatureIcon = (feature: string) => {
   const f = feature.toLowerCase();
+  if (f.includes('breakfast')) return Sunrise;
   if (f.includes('tv') || f.includes('television')) return Tv;
+  if (f.includes('hairdryer')) return Hairdryer;
+  if (f.includes('writing desk') || f.includes('desk')) return BookOpen;
+  if (f.includes('towel warmer')) return Thermometer;
+  if (f.includes('bathtub') || f.includes('bath tub')) return Bathtub;
+  if (f.includes('balcony') || f.includes('view')) return Wind;
+  if (f.includes('ironing board') || f.includes('iron')) return Shirt;
+  if (f.includes('kettle') || f.includes('coffee') || f.includes('tea')) return Coffee;
+  if (f.includes('telephone') || f.includes('phone')) return Smartphone;
   if (f.includes('safe') || f.includes('locker')) return Shield;
   if (f.includes('ac') || f.includes('air conditioning')) return Snowflake;
   if (f.includes('wifi') || f.includes('internet')) return Wifi;
-  if (f.includes('coffee') || f.includes('tea') || f.includes('kettle')) return Coffee;
-  if (f.includes('telephone') || f.includes('phone')) return Smartphone;
-  if (f.includes('balcony') || f.includes('view')) return Wind;
   if (f.includes('dining') || f.includes('food')) return UtensilsCrossed;
+  if (f.includes('swimming') || f.includes('pool')) return Waves;
   return Check;
 };
 
