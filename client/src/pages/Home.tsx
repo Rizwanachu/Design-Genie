@@ -425,7 +425,7 @@ function ServicesSection() {
     {
       title: "Airport Transfer",
       description: "Convenient and reliable airport pickup and drop-off services for a stress-free journey.",
-      image: "/assets/luxury_airport_trans_c547bf81.jpg"
+      image: "/src/assets/images/cochin-airport.jpg"
     }
   ];
 
