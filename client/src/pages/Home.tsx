@@ -152,7 +152,7 @@ function AboutSection() {
               <div className="absolute inset-4 border border-white/20 z-10" />
             </div>
             {/* Floating Card */}
-            <div className="absolute -bottom-6 -left-6 bg-card border border-white/10 p-6 rounded shadow-xl">
+            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-left-6 bg-card border border-white/10 p-6 rounded shadow-xl">
               <div className="flex items-center gap-4">
                 <div className="text-4xl font-display font-bold text-primary">10+</div>
                 <div className="text-sm text-muted-foreground uppercase tracking-wider">Years of <br/>Excellence</div>
