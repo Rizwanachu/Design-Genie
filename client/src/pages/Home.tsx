@@ -24,17 +24,17 @@ import { Form, FormField, FormItem, FormControl, FormMessage, FormLabel } from "
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Skeleton } from "@/components/ui/skeleton";
 
-import heroStockImage from '@assets/stock_images/luxury_hotel_dark_mo_26d529bb.jpg';
+import minimalistBg from '@/assets/minimalist-bg.png';
 
 // --- HERO SECTION ---
 function HeroSection() {
   return (
     <section id="hero" className="relative h-screen w-full overflow-hidden">
-      {/* Background Image - Luxury Hotel Interior/Exterior */}
+      {/* Background Image - Minimalist Abstract */}
       <div className="absolute inset-0">
         <img 
-          src={heroStockImage} 
-          alt="Luxury Hotel" 
+          src={minimalistBg} 
+          alt="Minimalist Background" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-background" />
