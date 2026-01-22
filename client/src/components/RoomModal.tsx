@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { type Room } from "@shared/schema";
 import {
   Dialog,
@@ -7,8 +8,23 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Check, Users, BedDouble, Bath, ArrowRight, ChevronLeft, ChevronRight, X } from "lucide-react";
-import { useState } from "react";
+import { 
+  Check, Users, BedDouble, Bath, ArrowRight, ChevronLeft, ChevronRight, X,
+  Tv, Shield, Wind, Wifi, Coffee, Smartphone, Snowflake, UtensilsCrossed
+} from "lucide-react";
+
+const getFeatureIcon = (feature: string) => {
+  const f = feature.toLowerCase();
+  if (f.includes('tv') || f.includes('television')) return Tv;
+  if (f.includes('safe') || f.includes('locker')) return Shield;
+  if (f.includes('ac') || f.includes('air conditioning')) return Snowflake;
+  if (f.includes('wifi') || f.includes('internet')) return Wifi;
+  if (f.includes('coffee') || f.includes('tea') || f.includes('kettle')) return Coffee;
+  if (f.includes('telephone') || f.includes('phone')) return Smartphone;
+  if (f.includes('balcony') || f.includes('view')) return Wind;
+  if (f.includes('dining') || f.includes('food')) return UtensilsCrossed;
+  return Check;
+};
 
 interface RoomModalProps {
   room: Room | null;
@@ -136,12 +152,15 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
                 <div>
                   <h4 className="font-display font-semibold text-white border-b border-white/10 pb-2 mb-4">Room Facilities</h4>
                   <ul className="grid grid-cols-2 gap-y-2 gap-x-4">
-                    {room.features?.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-xs text-muted-foreground">
-                        <Check className="h-3 w-3 text-primary shrink-0" />
-                        <span className="truncate">{feature}</span>
-                      </li>
-                    ))}
+                    {room.features?.map((feature, idx) => {
+                      const Icon = getFeatureIcon(feature);
+                      return (
+                        <li key={idx} className="flex items-center gap-2 text-xs text-muted-foreground">
+                          <Icon className="h-3 w-3 text-primary shrink-0" />
+                          <span className="truncate">{feature}</span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>
