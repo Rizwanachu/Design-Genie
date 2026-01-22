@@ -694,7 +694,7 @@ function LocationSection() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
           
-          <div className="absolute top-1/2 left-4 md:left-12 -translate-y-1/2 bg-card/90 backdrop-blur border border-white/10 p-8 rounded max-w-sm hidden md:block">
+          <div className="absolute top-8 right-4 md:right-12 bg-card/90 backdrop-blur border border-white/10 p-8 rounded max-w-sm hidden md:block">
             <h3 className="text-2xl font-display font-bold text-white mb-4">Visit Us</h3>
             <p className="text-muted-foreground mb-4">
               Experience premium hospitality in the heart of Kochi.
