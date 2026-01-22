@@ -754,9 +754,16 @@ function ContactSection() {
   });
 
   const onSubmit = (data: z.infer<typeof insertInquirySchema>) => {
-    mutation.mutate(data, {
-      onSuccess: () => form.reset(),
-    });
+    const subject = encodeURIComponent(data.subject);
+    const body = encodeURIComponent(
+      `Name: ${data.name}\n` +
+      `Phone: ${data.phone}\n` +
+      `Email: ${data.email}\n\n` +
+      `Message:\n${data.message}`
+    );
+    const mailtoUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=info@whv-residency.com&su=${subject}&body=${body}`;
+    window.open(mailtoUrl, '_blank');
+    form.reset();
   };
 
   return (
