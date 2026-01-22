@@ -24,20 +24,20 @@ import { Form, FormField, FormItem, FormControl, FormMessage, FormLabel } from "
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Skeleton } from "@/components/ui/skeleton";
 
-import minimalistBg from '@/assets/minimalist-bg-v3.png';
+import luxuryLobbyBg from '@/assets/luxury-lobby-bg.png';
 
 // --- HERO SECTION ---
 function HeroSection() {
   return (
     <section id="hero" className="relative h-screen w-full overflow-hidden">
-      {/* Background Image - Minimalist Abstract */}
+      {/* Background Image - Luxury Lobby */}
       <div className="absolute inset-0">
         <img 
-          src={minimalistBg} 
-          alt="Minimalist Background" 
+          src={luxuryLobbyBg} 
+          alt="Luxury Hotel Lobby" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-background" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       <div className="relative h-full container mx-auto px-4 md:px-6 flex flex-col justify-center items-center text-center">
