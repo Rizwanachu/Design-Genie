@@ -135,14 +135,14 @@ const additionalServices = [
       "Relax. Rejuvenate. Restore. Soulful spa services including relaxation massages, aromatherapy, deep tissue, facials, and body scrubs. Couple rooms available.",
     link: "https://www.thekeralaspa.com",
     image: "/attached_assets/image_1785909935236.png",
-    aspectClass: "aspect-square",
+    naturalSize: true,
   },
   {
     title: "Airport Transfer",
     description:
       "Convenient and reliable airport pickup and drop-off services for a stress-free journey.",
     image: cochinAirportImg,
-    aspectClass: "aspect-[16/9]",
+    naturalSize: false,
   },
 ];
 
@@ -256,14 +256,22 @@ export default function PoliciesAndServices() {
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                 >
-                  <div className={`${service.aspectClass} overflow-hidden`}>
+                  {service.naturalSize ? (
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                  </div>
+                  ) : (
+                    <div className="aspect-[16/9] overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
                   <div className="absolute bottom-0 left-0 right-0 p-8">
                     <h3 className="text-2xl font-display font-bold text-white mb-2">
