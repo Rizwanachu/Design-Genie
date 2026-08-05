@@ -135,12 +135,14 @@ const additionalServices = [
       "Relax. Rejuvenate. Restore. Soulful spa services including relaxation massages, aromatherapy, deep tissue, facials, and body scrubs. Couple rooms available.",
     link: "https://www.thekeralaspa.com",
     image: "/attached_assets/image_1785909935236.png",
+    aspectClass: "aspect-square",
   },
   {
     title: "Airport Transfer",
     description:
       "Convenient and reliable airport pickup and drop-off services for a stress-free journey.",
     image: cochinAirportImg,
+    aspectClass: "aspect-[16/9]",
   },
 ];
 
@@ -254,7 +256,7 @@ export default function PoliciesAndServices() {
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                 >
-                  <div className="aspect-[16/9] overflow-hidden">
+                  <div className={`${service.aspectClass} overflow-hidden`}>
                     <img
                       src={service.image}
                       alt={service.title}
