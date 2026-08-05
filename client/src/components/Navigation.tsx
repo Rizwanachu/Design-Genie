@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@assets/Logo2-black-1-2-2_1768773677477.png";
@@ -7,18 +7,19 @@ import logoScrolled from "@assets/image_1768813235608.png";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { name: "Home", href: "#hero" },
+  { name: "Home", href: "/" },
   { name: "Rooms", href: "#rooms" },
   { name: "Explore", href: "#nearby" },
-  { name: "Policies & Services", href: "#services" },
-  { name: "Gallery", href: "#gallery" },
+  { name: "Policies & Services", href: "/policies" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Location", href: "#location" },
-  { name: "Contact", href: "#contact" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [location, navigate] = useLocation();
 
   useEffect(() => {
     if (isOpen) {
@@ -39,13 +40,28 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const handleNavClick = (href: string) => {
     setIsOpen(false);
-    if (id === "#hero") {
+
+    // Route navigation (pages)
+    if (!href.startsWith("#")) {
+      navigate(href);
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
-    const element = document.querySelector(id);
+
+    // Anchor scroll — if not on home page, navigate via full href so browser scrolls
+    if (location !== "/") {
+      window.location.href = href === "#hero" ? "/" : `/${href}`;
+      return;
+    }
+
+    // On home page: scroll to anchor
+    if (href === "#hero") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -61,15 +77,23 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a
-            href="#"
+            href="/"
             onClick={(e) => {
               e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              if (location !== "/") {
+                navigate("/");
+              } else {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
             }}
             className="flex items-center gap-2 group"
           >
             <div className="p-1.5 rounded-sm transition-transform group-hover:scale-105 bg-[#ffffff00] text-[#a6a6a600]">
-              <img src={scrolled ? logoScrolled : logo} alt="W & H View Residency" className="h-[60px] w-[60px] object-contain transition-all duration-300" />
+              <img
+                src={scrolled ? logoScrolled : logo}
+                alt="W & H View Residency"
+                className="h-[60px] w-[60px] object-contain transition-all duration-300"
+              />
             </div>
           </a>
 
@@ -78,7 +102,7 @@ export function Navigation() {
             {navLinks.map((link) => (
               <button
                 key={link.name}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleNavClick(link.href)}
                 className={`text-sm font-medium uppercase tracking-widest hover:text-primary transition-colors ${
                   scrolled ? "text-foreground" : "text-white text-shadow"
                 }`}
@@ -87,9 +111,7 @@ export function Navigation() {
               </button>
             ))}
             <a href="tel:+918129468888">
-              <Button 
-                className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-8 font-display tracking-widest uppercase text-xs"
-              >
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-8 font-display tracking-widest uppercase text-xs">
                 Book Now
               </Button>
             </a>
@@ -107,6 +129,7 @@ export function Navigation() {
           </button>
         </div>
       </div>
+
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -139,17 +162,17 @@ export function Navigation() {
                 {navLinks.map((link) => (
                   <button
                     key={link.name}
-                    onClick={() => scrollToSection(link.href)}
+                    onClick={() => handleNavClick(link.href)}
                     className="text-lg font-display font-light text-white hover:text-primary transition-colors text-left py-2 border-b border-white/10"
                   >
                     {link.name}
                   </button>
                 ))}
               </div>
-              
+
               <div className="mt-auto pt-6 pb-8">
                 <a href="tel:+918129468888" className="block w-full">
-                  <Button 
+                  <Button
                     size="lg"
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-display tracking-widest uppercase text-sm"
                   >
