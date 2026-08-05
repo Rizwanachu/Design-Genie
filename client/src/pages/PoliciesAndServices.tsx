@@ -138,6 +138,15 @@ const additionalServices = [
     naturalSize: true,
   },
   {
+    title: "WH Restaurant — Arabian Sea Delights",
+    description:
+      "Now open at W&H View Residency. Savour Kerala, Arabian & Chinese cuisine — traditional breakfast, snacks, biryanis, grills, and more. Comfort in every stay, delight in every bite.",
+    phone: "+91 7994912900",
+    image:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop",
+    naturalSize: false,
+  },
+  {
     title: "Airport Transfer",
     description:
       "Convenient and reliable airport pickup and drop-off services for a stress-free journey.",
@@ -289,6 +298,13 @@ export default function PoliciesAndServices() {
                         className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-display font-bold tracking-widest uppercase text-sm border-b border-primary/30 pb-1"
                       >
                         Visit Website
+                      </a>
+                    ) : service.phone ? (
+                      <a
+                        href={`tel:${service.phone}`}
+                        className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-display font-bold tracking-widest uppercase text-sm border-b border-primary/30 pb-1"
+                      >
+                        {service.phone}
                       </a>
                     ) : (
                       <div className="text-xs font-display font-bold tracking-widest uppercase text-primary/60">
