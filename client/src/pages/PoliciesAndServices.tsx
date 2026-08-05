@@ -142,9 +142,8 @@ const additionalServices = [
     description:
       "Now open at W&H View Residency. Savour Kerala, Arabian & Chinese cuisine — traditional breakfast, snacks, biryanis, grills, and more. Comfort in every stay, delight in every bite.",
     phone: "+91 7994912900",
-    image:
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop",
-    naturalSize: false,
+    image: "/attached_assets/Arabian_Sea_Delights_-_Restaurant_in_kochi_1785911263359.jpeg",
+    naturalSize: true,
   },
   {
     title: "Airport Transfer",
