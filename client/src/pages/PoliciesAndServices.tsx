@@ -130,11 +130,11 @@ const services = [
 
 const additionalServices = [
   {
-    title: "Kayaa Holistic Center",
+    title: "The Kerala Spa",
     description:
-      "Experience professional Ayurvedic wellness and holistic healing at Kayaa Holistic Center.",
-    link: "https://kayaaholistic.com/",
-    image: ayurvedicSpaImg,
+      "Relax. Rejuvenate. Restore. Soulful spa services including relaxation massages, aromatherapy, deep tissue, facials, and body scrubs. Couple rooms available.",
+    link: "https://www.thekeralaspa.com",
+    image: "/attached_assets/image_1785909935236.png",
   },
   {
     title: "Airport Transfer",
