@@ -1,35 +1,101 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ImageOff } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
-const images = [
-  "/assets/image_1768910147198.png",
-  "/assets/image_1768910169247.png",
-  "/assets/image_1768910180678.png",
-  "/assets/image_1768910190709.png",
-  "/assets/image_1768910772330.png",
-  "/assets/image_1768780481805.png",
-  "/assets/image_1768910347128.png",
-  "/assets/image_1768911244463.png",
-  "/assets/image_1768912566517.png",
+type Category =
+  | "All"
+  | "Hotel"
+  | "Standard Rooms"
+  | "Deluxe King Room"
+  | "Premium King Room"
+  | "Spa"
+  | "Restaurant";
+
+interface GalleryImage {
+  src: string;
+  alt: string;
+  category: Exclude<Category, "All">;
+}
+
+const allImages: GalleryImage[] = [
+  // Hotel
+  {
+    src: "/assets/image_1768910772330.png",
+    alt: "Hotel lobby lounge",
+    category: "Hotel",
+  },
+  // Premium King Room
+  {
+    src: "/assets/image_1768910147198.png",
+    alt: "Premium King Room – bedroom overview",
+    category: "Premium King Room",
+  },
+  {
+    src: "/assets/image_1768910169247.png",
+    alt: "Premium King Room – river view angle",
+    category: "Premium King Room",
+  },
+  {
+    src: "/assets/image_1768910180678.png",
+    alt: "Premium King Room – en-suite bathroom",
+    category: "Premium King Room",
+  },
+  {
+    src: "/assets/image_1768910190709.png",
+    alt: "Premium King Room – double-door bathroom",
+    category: "Premium King Room",
+  },
+  // Spa
+  {
+    src: "/assets/ayurvedic_spa_holist_8907cf1d.jpg",
+    alt: "Ayurvedic wellness treatment",
+    category: "Spa",
+  },
+  {
+    src: "/kerala-spa.png",
+    alt: "The Kerala Spa",
+    category: "Spa",
+  },
+  // Restaurant
+  {
+    src: "/arabian-sea-delights.jpeg",
+    alt: "WH Restaurant – Arabian Sea Delights",
+    category: "Restaurant",
+  },
+];
+
+const TABS: Category[] = [
+  "All",
+  "Hotel",
+  "Standard Rooms",
+  "Deluxe King Room",
+  "Premium King Room",
+  "Spa",
+  "Restaurant",
 ];
 
 export default function Gallery() {
+  const [activeTab, setActiveTab] = useState<Category>("All");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const filtered =
+    activeTab === "All"
+      ? allImages
+      : allImages.filter((img) => img.category === activeTab);
 
   const openLightbox = (idx: number) => setLightboxIndex(idx);
   const closeLightbox = () => setLightboxIndex(null);
 
   const prevImage = () => {
     if (lightboxIndex === null) return;
-    setLightboxIndex((lightboxIndex - 1 + images.length) % images.length);
+    setLightboxIndex((lightboxIndex - 1 + filtered.length) % filtered.length);
   };
 
   const nextImage = () => {
     if (lightboxIndex === null) return;
-    setLightboxIndex((lightboxIndex + 1) % images.length);
+    setLightboxIndex((lightboxIndex + 1) % filtered.length);
   };
 
   return (
@@ -51,48 +117,91 @@ export default function Gallery() {
               Our Gallery
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto text-lg">
-              Explore the elegance and comfort of W &amp; H View Residency through our curated collection of images.
+              Explore the elegance and comfort of W &amp; H View Residency
+              through our curated collection of images.
             </p>
           </motion.div>
         </div>
       </div>
 
-      {/* Gallery Grid */}
-      <section className="py-20 bg-[#0F0F0F]">
+      {/* Gallery */}
+      <section className="py-16 bg-[#0F0F0F]">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {images.map((src, idx) => (
-              <motion.div
-                key={idx}
-                className="relative aspect-square overflow-hidden rounded group cursor-pointer"
-                initial={{ opacity: 0, scale: 0.96 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.07 }}
-                onClick={() => openLightbox(idx)}
+
+          {/* Tabs */}
+          <div className="flex flex-wrap gap-2 justify-center mb-12">
+            {TABS.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => {
+                  setActiveTab(tab);
+                  setLightboxIndex(null);
+                }}
+                className={`px-4 py-2 rounded-md text-sm font-display font-bold tracking-widest uppercase transition-all duration-200 ${
+                  activeTab === tab
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-white/5 text-muted-foreground hover:bg-white/10 hover:text-white"
+                }`}
               >
-                <img
-                  src={src}
-                  alt={`Gallery image ${idx + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = "none";
-                  }}
-                />
-                <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-black font-display font-bold tracking-widest uppercase border-b-2 border-black pb-1">
-                    View
-                  </span>
-                </div>
-              </motion.div>
+                {tab}
+              </button>
             ))}
           </div>
+
+          {/* Grid or empty state */}
+          <AnimatePresence mode="wait">
+            {filtered.length === 0 ? (
+              <motion.div
+                key="empty"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="flex flex-col items-center justify-center py-32 text-center gap-4"
+              >
+                <ImageOff className="w-12 h-12 text-white/20" />
+                <p className="text-muted-foreground font-display tracking-widest uppercase text-sm">
+                  Photos coming soon
+                </p>
+              </motion.div>
+            ) : (
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+              >
+                {filtered.map((img, idx) => (
+                  <motion.div
+                    key={img.src}
+                    className="relative aspect-square overflow-hidden rounded group cursor-pointer"
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: idx * 0.06 }}
+                    onClick={() => openLightbox(idx)}
+                  >
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <span className="text-black font-display font-bold tracking-widest uppercase border-b-2 border-black pb-1">
+                        View
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
 
       {/* Lightbox */}
       <AnimatePresence>
-        {lightboxIndex !== null && (
+        {lightboxIndex !== null && filtered[lightboxIndex] && (
           <motion.div
             className="fixed inset-0 z-[200] bg-black/95 flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
@@ -108,14 +217,17 @@ export default function Gallery() {
             </button>
             <button
               className="absolute left-4 md:left-8 text-white/70 hover:text-white p-2 z-10 bg-black/40 rounded-full"
-              onClick={(e) => { e.stopPropagation(); prevImage(); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
             >
               <ChevronLeft className="h-8 w-8" />
             </button>
             <motion.img
               key={lightboxIndex}
-              src={images[lightboxIndex]}
-              alt={`Gallery image ${lightboxIndex + 1}`}
+              src={filtered[lightboxIndex].src}
+              alt={filtered[lightboxIndex].alt}
               className="max-h-[85vh] max-w-[85vw] object-contain rounded"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -124,12 +236,15 @@ export default function Gallery() {
             />
             <button
               className="absolute right-4 md:right-8 text-white/70 hover:text-white p-2 z-10 bg-black/40 rounded-full"
-              onClick={(e) => { e.stopPropagation(); nextImage(); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
             >
               <ChevronRight className="h-8 w-8" />
             </button>
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/50 text-sm font-display tracking-wider">
-              {lightboxIndex + 1} / {images.length}
+              {lightboxIndex + 1} / {filtered.length}
             </div>
           </motion.div>
         )}
