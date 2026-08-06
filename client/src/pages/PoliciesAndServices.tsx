@@ -134,7 +134,7 @@ const additionalServices = [
     description:
       "Relax. Rejuvenate. Restore. Soulful spa services including relaxation massages, aromatherapy, deep tissue, facials, and body scrubs. Couple rooms available.",
     link: "https://www.thekeralaspa.com",
-    image: "/attached_assets/image_1785909935236.png",
+    image: "/kerala-spa.png",
     naturalSize: true,
   },
   {
@@ -142,7 +142,7 @@ const additionalServices = [
     description:
       "Now open at W&H View Residency. Savour Kerala, Arabian & Chinese cuisine — traditional breakfast, snacks, biryanis, grills, and more. Comfort in every stay, delight in every bite.",
     phone: "+91 7994912900",
-    image: "/attached_assets/Arabian_Sea_Delights_-_Restaurant_in_kochi_1785911263359.jpeg",
+    image: "/arabian-sea-delights.jpeg",
     naturalSize: true,
   },
   {
