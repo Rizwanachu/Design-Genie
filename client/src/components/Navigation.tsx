@@ -65,9 +65,10 @@ export function Navigation() {
       return;
     }
 
-    // Anchor scroll — if not on home page, navigate via full href so browser scrolls
+    // Anchor scroll — if not on home page, store target and navigate via wouter
     if (location !== "/") {
-      window.location.href = `/${href}`;
+      sessionStorage.setItem("scrollTarget", href);
+      navigate("/");
       return;
     }
 
