@@ -296,7 +296,7 @@ export default function PoliciesAndServices() {
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-display font-bold tracking-widest uppercase text-sm border-b border-primary/30 pb-1"
+                        className="inline-flex items-center gap-2 bg-primary hover:bg-primary/80 text-primary-foreground transition-colors font-display font-bold tracking-widest uppercase text-sm px-4 py-2 rounded-md"
                       >
                         Visit Website
                       </a>
