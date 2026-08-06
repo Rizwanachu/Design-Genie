@@ -77,8 +77,8 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
 
-  // Seed data on startup
-  seedDatabase();
+  // Seed data on startup (best-effort — no-op if DB is unavailable or schema not yet pushed)
+  seedDatabase().catch(() => {});
 
   // Rooms API
   app.get(api.rooms.list.path, async (_req, res) => {
