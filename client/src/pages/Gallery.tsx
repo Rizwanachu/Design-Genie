@@ -47,6 +47,27 @@ const allImages: GalleryImage[] = [
     alt: "Premium King Room – double-door bathroom",
     category: "Premium King Room",
   },
+  // Deluxe King Room
+  {
+    src: "/assets/image_1786016987936.png",
+    alt: "Deluxe King Room – bedroom overview",
+    category: "Deluxe King Room",
+  },
+  {
+    src: "/assets/image_1786016996748.png",
+    alt: "Deluxe King Room – bedroom angle",
+    category: "Deluxe King Room",
+  },
+  {
+    src: "/assets/image_1786017034298.png",
+    alt: "Deluxe King Room – bathroom vanity",
+    category: "Deluxe King Room",
+  },
+  {
+    src: "/assets/image_1786017050895.png",
+    alt: "Deluxe King Room – bathroom with shower",
+    category: "Deluxe King Room",
+  },
   // Spa
   {
     src: "/assets/ayurvedic_spa_holist_8907cf1d.jpg",

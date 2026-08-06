@@ -45,11 +45,12 @@ export const roomsData: Room[] = [
       "Towel Warmer", "Bathtub", "Balcony", "Ironing Board", 
       "Kettle", "Telephone", "Safe"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "/assets/image_1786016987936.png",
     gallery: [
-      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=1000&auto=format&fit=crop"
+      "/assets/image_1786016987936.png",
+      "/assets/image_1786016996748.png",
+      "/assets/image_1786017034298.png",
+      "/assets/image_1786017050895.png"
     ]
   },
   {
