@@ -3,9 +3,13 @@ import {
   Wifi,
   Car,
   Utensils,
-  Shield,
-  HeartHandshake,
-  CheckCircle2,
+  Ban,
+  Leaf,
+  CalendarCheck,
+  PawPrint,
+  CreditCard,
+  ScrollText,
+  Lock,
 } from "lucide-react";
 import {
   Accordion,
@@ -30,13 +34,13 @@ const services = [
         <li>Early/late check-in subject to availability</li>
       </ul>
     ),
-    icon: CheckCircle2,
+    icon: CalendarCheck,
   },
   {
     id: "pets",
     title: "Pets",
     content: "Pets not allowed",
-    icon: HeartHandshake,
+    icon: PawPrint,
   },
   {
     id: "cancellation",
@@ -48,7 +52,7 @@ const services = [
         <li>No-shows charged full amount</li>
       </ul>
     ),
-    icon: Shield,
+    icon: Ban,
   },
   {
     id: "payment",
@@ -59,7 +63,7 @@ const services = [
         <li>Cash, UPI, Credit/Debit Cards</li>
       </ul>
     ),
-    icon: CheckCircle2,
+    icon: CreditCard,
   },
   {
     id: "dining",
@@ -88,7 +92,7 @@ const services = [
         <li>Doctor-supervised treatments</li>
       </ul>
     ),
-    icon: HeartHandshake,
+    icon: Leaf,
   },
   {
     id: "parking",
@@ -112,7 +116,7 @@ const services = [
         <li>Management reserves right to refuse service</li>
       </ul>
     ),
-    icon: Shield,
+    icon: ScrollText,
   },
   {
     id: "privacy",
@@ -124,7 +128,7 @@ const services = [
         <li>Data correction/deletion via info@whv-residency.com</li>
       </ul>
     ),
-    icon: Shield,
+    icon: Lock,
   },
 ];
 
