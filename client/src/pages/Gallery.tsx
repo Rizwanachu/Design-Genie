@@ -49,22 +49,22 @@ const allImages: GalleryImage[] = [
   },
   // Standard Rooms
   {
-    src: "/assets/image_1786019758544.png",
+    src: "/attached_assets/image_1786019758544.png",
     alt: "Standard Room – four-poster bedroom",
     category: "Standard Rooms",
   },
   {
-    src: "/assets/image_1786019842267.png",
+    src: "/attached_assets/image_1786019842267.png",
     alt: "Standard Room – bedroom angle",
     category: "Standard Rooms",
   },
   {
-    src: "/assets/image_1786019850532.png",
+    src: "/attached_assets/image_1786019850532.png",
     alt: "Standard Room – bathroom with shower",
     category: "Standard Rooms",
   },
   {
-    src: "/assets/image_1786019869041.png",
+    src: "/attached_assets/image_1786019869041.png",
     alt: "Standard Room – bathroom overview",
     category: "Standard Rooms",
   },
