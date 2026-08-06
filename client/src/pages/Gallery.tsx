@@ -70,23 +70,18 @@ const allImages: GalleryImage[] = [
   },
   // Deluxe King Room
   {
-    src: "/assets/image_1786016987936.png",
+    src: "/attached_assets/image_1786021526150.png",
     alt: "Deluxe King Room – bedroom overview",
     category: "Deluxe King Room",
   },
   {
-    src: "/assets/image_1786016996748.png",
+    src: "/attached_assets/image_1786021533433.png",
     alt: "Deluxe King Room – bedroom angle",
     category: "Deluxe King Room",
   },
   {
-    src: "/assets/image_1786017034298.png",
-    alt: "Deluxe King Room – bathroom vanity",
-    category: "Deluxe King Room",
-  },
-  {
-    src: "/assets/image_1786017050895.png",
-    alt: "Deluxe King Room – bathroom with shower",
+    src: "/attached_assets/image_1786021540505.png",
+    alt: "Deluxe King Room – bathroom",
     category: "Deluxe King Room",
   },
   // Spa
