@@ -47,6 +47,27 @@ const allImages: GalleryImage[] = [
     alt: "Premium King Room – double-door bathroom",
     category: "Premium King Room",
   },
+  // Standard Rooms
+  {
+    src: "/assets/image_1786017471542.png",
+    alt: "Standard Room – four-poster bedroom",
+    category: "Standard Rooms",
+  },
+  {
+    src: "/assets/image_1786017506682.png",
+    alt: "Standard Room – bedroom angle",
+    category: "Standard Rooms",
+  },
+  {
+    src: "/assets/image_1786017513547.png",
+    alt: "Standard Room – bathroom overview",
+    category: "Standard Rooms",
+  },
+  {
+    src: "/assets/image_1786017522550.png",
+    alt: "Standard Room – bathroom vanity",
+    category: "Standard Rooms",
+  },
   // Deluxe King Room
   {
     src: "/assets/image_1786016987936.png",
