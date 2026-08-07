@@ -1,0 +1,1 @@
+- [Vercel npm registry](vercel-npm-registry.md) — Imported lockfiles may contain Replit-internal tarball URLs; keep a public npm registry override for external builds.
