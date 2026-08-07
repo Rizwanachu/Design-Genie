@@ -100,6 +100,16 @@ const allImages: GalleryImage[] = [
     alt: "The Kerala Spa – soulfulness spa services",
     category: "Spa",
   },
+  {
+    src: "/attached_assets/Cleaning_spa_room_with_items_202608071237_1786088116276.jpeg",
+    alt: "The Kerala Spa – treatment room with massage items",
+    category: "Spa",
+  },
+  {
+    src: "/attached_assets/Cleaning_and_lighting_spa_room_202608071249_1786088135701.jpeg",
+    alt: "The Kerala Spa – illuminated treatment room",
+    category: "Spa",
+  },
   // Restaurant
   {
     src: "/arabian-sea-delights.jpeg",
