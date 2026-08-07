@@ -1,6 +1,7 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
-import { rm, readFile } from "fs/promises";
+import { cp, rm } from "fs/promises";
+import { extname } from "path";
 
 // server deps to bundle to reduce openat(2) syscalls
 // which helps cold start times
@@ -37,6 +38,17 @@ async function buildAll() {
 
   console.log("building client...");
   await viteBuild();
+
+  // The dev server exposes attached_assets directly, but Vercel only serves
+  // files written into dist/public. Preserve that URL space for gallery and
+  // room images that use /attached_assets/... paths.
+  await cp("attached_assets", "dist/public/attached_assets", {
+    recursive: true,
+    filter: (source) => {
+      const extension = extname(source).toLowerCase();
+      return extension === "" || [".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"].includes(extension);
+    },
+  });
 
   // For Vercel static, we don't need the server bundle
   // but we keep the script structure to avoid breaking the build command
