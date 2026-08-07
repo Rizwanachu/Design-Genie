@@ -101,6 +101,16 @@ const allImages: GalleryImage[] = [
     alt: "WH Restaurant – Arabian Sea Delights",
     category: "Restaurant",
   },
+  {
+    src: "/attached_assets/Clean_restaurant_and_fix_lighting_202608071057_1786080488154.jpeg",
+    alt: "WH Restaurant – bright dining area",
+    category: "Restaurant",
+  },
+  {
+    src: "/attached_assets/Clean_empty_restaurant_202608071053_1786080488157.jpeg",
+    alt: "WH Restaurant – dining area and lounge",
+    category: "Restaurant",
+  },
 ];
 
 const TABS: Category[] = [
