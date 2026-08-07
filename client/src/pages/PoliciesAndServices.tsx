@@ -138,7 +138,7 @@ const additionalServices = [
     description:
       "Relax. Rejuvenate. Restore. Soulful spa services including relaxation massages, aromatherapy, deep tissue, facials, and body scrubs. Couple rooms available.",
     link: "https://www.thekeralaspa.com",
-    image: "/kerala-spa.png",
+    image: "/attached_assets/image_1786084716041.png",
     naturalSize: true,
   },
   {
