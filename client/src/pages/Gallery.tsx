@@ -95,6 +95,11 @@ const allImages: GalleryImage[] = [
     alt: "The Kerala Spa",
     category: "Spa",
   },
+  {
+    src: "/attached_assets/image_1786081073837.png",
+    alt: "The Kerala Spa – soulfulness spa services",
+    category: "Spa",
+  },
   // Restaurant
   {
     src: "/arabian-sea-delights.jpeg",
