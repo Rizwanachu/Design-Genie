@@ -77,5 +77,31 @@ export const roomsData: Room[] = [
       "/attached_assets/image_1786020211781.png",
       "/attached_assets/image_1786020218959.png"
     ]
+  },
+  {
+    id: 4,
+    name: "Heritage Room",
+    slug: "heritage-room",
+    description: "Settle into a warm, traditional stay with a four-poster bed, handcrafted wood details, and thoughtful modern comforts.",
+    size: "30 sqm",
+    beds: "1",
+    bathrooms: 1,
+    adults: 2,
+    children: 1,
+    view: "Heritage View",
+    price: 10000,
+    roomNumbers: ["107", "212"],
+    features: [
+      "Breakfast Included", "Flat TV", "Hairdryer", "Writing Desk",
+      "Towel Warmer", "Shower", "Ironing Board", "Kettle",
+      "Telephone", "Safe", "Air Conditioning"
+    ],
+    imageUrl: "/assets/image_1786019758544.png",
+    gallery: [
+      "/assets/image_1786019758544.png",
+      "/assets/image_1786019842267.png",
+      "/assets/image_1786019850532.png",
+      "/assets/image_1786019869041.png"
+    ]
   }
 ];
