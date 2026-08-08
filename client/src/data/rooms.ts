@@ -90,7 +90,7 @@ export const roomsData: Room[] = [
     children: 1,
     view: "Heritage View",
     price: 10000,
-    roomNumbers: ["107", "212"],
+    roomNumbers: ["104", "212"],
     features: [
       "Breakfast Included", "Flat TV", "Hairdryer", "Writing Desk",
       "Towel Warmer", "Shower", "Ironing Board", "Kettle",
