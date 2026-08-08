@@ -15,7 +15,7 @@ export const roomsData: Room[] = [
     price: 15000,
     roomNumbers: ["105", "210"],
     features: [
-      "Breakfast Included", "Flat TV", "Hairdryer", "Writing Desk", 
+      "Breakfast available on request", "Flat TV", "Hairdryer", "Writing Desk",
       "Towel Warmer", "Bathtub", "Balcony", "Ironing Board", 
       "Kettle", "Telephone", "Safe"
     ],
@@ -41,7 +41,7 @@ export const roomsData: Room[] = [
     price: 12000,
     roomNumbers: ["101", "102", "103", "206", "207", "208"],
     features: [
-      "Breakfast Included", "Flat TV", "Hairdryer", "Writing Desk", 
+      "Breakfast available on request", "Flat TV", "Hairdryer", "Writing Desk",
       "Towel Warmer", "Bathtub", "Balcony", "Ironing Board", 
       "Kettle", "Telephone", "Safe"
     ],
@@ -66,7 +66,7 @@ export const roomsData: Room[] = [
     price: 8000,
     roomNumbers: ["104", "209"],
     features: [
-      "Breakfast Included", "Flat TV", "Hairdryer", "Writing Desk", 
+      "Breakfast available on request", "Flat TV", "Hairdryer", "Writing Desk",
       "Towel Warmer", "Bathtub", "Balcony", "Ironing Board", 
       "Kettle", "Telephone", "Safe"
     ],
@@ -92,7 +92,7 @@ export const roomsData: Room[] = [
     price: 10000,
     roomNumbers: ["104", "212"],
     features: [
-      "Breakfast Included", "Flat TV", "Hairdryer", "Writing Desk",
+      "Breakfast available on request", "Flat TV", "Hairdryer", "Writing Desk",
       "Towel Warmer", "Shower", "Ironing Board", "Kettle",
       "Telephone", "Safe", "Air Conditioning"
     ],
