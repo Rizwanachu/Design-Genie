@@ -27,6 +27,21 @@ const allImages: GalleryImage[] = [
     alt: "Hotel lobby lounge",
     category: "Hotel",
   },
+  {
+    src: "/attached_assets/image.png_202609091558_1788950964864.jpeg",
+    alt: "Hotel garden lounge and covered courtyard",
+    category: "Hotel",
+  },
+  {
+    src: "/attached_assets/Adjust_lighting_and_remove_person_202609031225_1788950964865.jpeg",
+    alt: "Hotel reception and lobby lounge",
+    category: "Hotel",
+  },
+  {
+    src: "/attached_assets/Cleaning_building_and_surroundings_2K_202608131947_1788950964866.jpeg",
+    alt: "W&H View Residency exterior",
+    category: "Hotel",
+  },
   // Premium King Room
   {
     src: "/assets/image_1768910147198.png",
