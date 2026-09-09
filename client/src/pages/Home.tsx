@@ -16,7 +16,8 @@ import { BookingModal } from "@/components/BookingModal";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 
-import luxuryLobbyBg from '@/assets/luxury-lobby-bg.png';
+import aboutImage from "@assets/image.png_202609091558_1788949705121.jpeg";
+import heroImage from "@assets/Adjust_lighting_and_remove_person_202609031225_1788949741132.jpeg";
 
 // --- HERO SECTION ---
 function HeroSection() {
@@ -25,8 +26,8 @@ function HeroSection() {
       {/* Background Image - Luxury Lobby */}
       <div className="absolute inset-0">
         <img 
-          src={luxuryLobbyBg} 
-          alt="Luxury Hotel Lobby" 
+          src={heroImage}
+          alt="W&H View Residency reception and lounge"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />
@@ -135,8 +136,8 @@ function AboutSection() {
           >
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden border border-white/10">
               <img 
-                src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format&fit=crop" 
-                alt="Interior" 
+                src={aboutImage}
+                alt="W&H View Residency garden dining courtyard"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-4 border border-white/20 z-10" />
