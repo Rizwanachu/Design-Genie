@@ -84,11 +84,11 @@ const services = [
     icon: Wifi,
   },
   {
-    id: "wellness",
-    title: "Wellness",
+    id: "spa",
+    title: "Spa",
     content: (
       <ul className="list-disc pl-5 space-y-1">
-        <li>Ayurvedic massage with advance booking</li>
+        <li>Spa massage with advance booking</li>
         <li>Doctor-supervised treatments</li>
       </ul>
     ),
