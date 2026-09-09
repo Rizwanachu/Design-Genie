@@ -29,8 +29,8 @@ const services = [
     title: "Check-in & Check-out",
     content: (
       <ul className="list-disc pl-5 space-y-1">
-        <li>Check-in: 14:00 hrs</li>
-        <li>Check-out: 12:00 noon</li>
+        <li>Check-in: 1:00 PM</li>
+        <li>Check-out: 11:00 AM</li>
         <li>Early/late check-in subject to availability</li>
       </ul>
     ),
