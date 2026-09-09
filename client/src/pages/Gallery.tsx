@@ -10,6 +10,7 @@ type Category =
   | "Standard Rooms"
   | "Deluxe King Room"
   | "Premium King Room"
+  | "Heritage Room"
   | "Spa"
   | "Restaurant";
 
@@ -49,24 +50,40 @@ const allImages: GalleryImage[] = [
   },
   // Standard Rooms
   {
-    src: "/attached_assets/image_1786020196801.png",
-    alt: "Standard Room – four-poster bedroom",
+    src: "/attached_assets/image_1786021526150.png",
+    alt: "Standard Room – bedroom overview",
     category: "Standard Rooms",
   },
   {
-    src: "/attached_assets/image_1786020204795.png",
+    src: "/attached_assets/image_1786021533433.png",
     alt: "Standard Room – bedroom angle",
     category: "Standard Rooms",
   },
   {
-    src: "/attached_assets/image_1786020211781.png",
-    alt: "Standard Room – bathroom with shower",
+    src: "/attached_assets/image_1786021540505.png",
+    alt: "Standard Room – bathroom",
     category: "Standard Rooms",
   },
+  // Heritage Room
   {
-    src: "/attached_assets/image_1786020218959.png",
-    alt: "Standard Room – bathroom overview",
-    category: "Standard Rooms",
+    src: "/assets/image_1786019758544.png",
+    alt: "Heritage Room – four-poster bedroom",
+    category: "Heritage Room",
+  },
+  {
+    src: "/assets/image_1786019842267.png",
+    alt: "Heritage Room – bedroom angle",
+    category: "Heritage Room",
+  },
+  {
+    src: "/assets/image_1786019850532.png",
+    alt: "Heritage Room – bathroom",
+    category: "Heritage Room",
+  },
+  {
+    src: "/assets/image_1786019869041.png",
+    alt: "Heritage Room – bathroom overview",
+    category: "Heritage Room",
   },
   // Deluxe King Room
   {
@@ -134,6 +151,7 @@ const TABS: Category[] = [
   "Standard Rooms",
   "Deluxe King Room",
   "Premium King Room",
+  "Heritage Room",
   "Spa",
   "Restaurant",
 ];
@@ -236,7 +254,7 @@ export default function Gallery() {
               >
                 {filtered.map((img, idx) => (
                   <motion.div
-                    key={img.src}
+                    key={`${img.category}-${img.src}`}
                     className="relative aspect-square overflow-hidden rounded group cursor-pointer"
                     initial={{ opacity: 0, scale: 0.96 }}
                     animate={{ opacity: 1, scale: 1 }}
