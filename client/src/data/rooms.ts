@@ -29,7 +29,7 @@ export const roomsData: Room[] = [
   },
   {
     id: 2,
-    name: "Deluxe King Room",
+    name: "Deluxe King Room with Massage Bed",
     slug: "deluxe-king",
     description: "Unlike the Standard Room, the Deluxe King Room includes an adjustable massage bed with smart wireless controls, multiple comfort modes, premium bedding, and a calm river-facing atmosphere.",
     size: "23 sqm",
