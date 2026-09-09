@@ -153,7 +153,7 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
                     </div>
                     <div className="flex items-center gap-3 text-sm text-muted-foreground">
                       <Bath className="h-4 w-4 text-primary" />
-                      <span>{room.bathrooms} Bathrooms</span>
+                      <span>{room.bathrooms} Bathrooms, 1 Toilet</span>
                     </div>
                   </div>
                 </div>
