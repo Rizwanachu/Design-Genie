@@ -1,14 +1,18 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-background pt-24 pb-16">
-      <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-        <Card className="border-none bg-card/50 backdrop-blur-sm">
-          <CardHeader className="text-center pb-8 border-b border-white/5">
-            <CardTitle className="text-3xl md:text-4xl font-display font-bold text-primary">Privacy Policy</CardTitle>
-          </CardHeader>
-          <CardContent className="pt-8 space-y-8 text-muted-foreground leading-relaxed">
+    <div className="min-h-screen bg-background text-foreground">
+      <Navigation />
+      <main className="pt-32 pb-16">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <Card className="border-none bg-card/50 backdrop-blur-sm">
+            <CardHeader className="text-center pb-8 border-b border-white/5">
+              <CardTitle className="text-3xl md:text-4xl font-display font-bold text-primary">Privacy Policy</CardTitle>
+            </CardHeader>
+            <CardContent className="pt-8 space-y-8 text-muted-foreground leading-relaxed">
             <section>
               <p>
                 W&H View Residency (herein referred to as “W&H”, “the Company”, “we”, “us”, or “our”) is committed to respecting your privacy and ensuring that your personal information is handled responsibly and in compliance with applicable data protection laws.
@@ -136,7 +140,7 @@ export default function PrivacyPolicy() {
                 <p className="font-semibold text-primary">Data Protection Contact</p>
                 <p>W&H View Residency</p>
                 <p>Address: 6/153, Jew Town Rd, Kappalandimukku, Mattancherry, Kochi, Kerala 682002, India</p>
-                <p>Phone: +91 484 291 2900</p>
+                <p>Phone: +91 7994912900</p>
                 <p>Email: info@whv-residency.com</p>
               </div>
             </section>
@@ -154,9 +158,11 @@ export default function PrivacyPolicy() {
                 This Privacy Policy is governed by the laws of India. Any disputes shall fall under the exclusive jurisdiction of the courts of Kerala.
               </p>
             </section>
-          </CardContent>
-        </Card>
-      </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }

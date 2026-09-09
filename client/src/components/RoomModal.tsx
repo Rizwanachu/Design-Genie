@@ -9,11 +9,13 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { 
-  Check, Users, BedDouble, Bath, ArrowRight, ChevronLeft, ChevronRight, X,
+  Check, Users, BedDouble, Bath, ArrowRight, ChevronLeft, ChevronRight, X, FileText,
   Tv, Shield, Wind, Wifi, Coffee, Smartphone, Snowflake, UtensilsCrossed,
   Sunrise, Wind as Hairdryer, BookOpen, Thermometer, Bath as Bathtub, 
   Shirt, Waves
 } from "lucide-react";
+
+const massageBedBrochureUrl = "/attached_assets/WH_View_Residency_Guest_Brochure_No_Room_Facilities_1788955038755.pdf";
 
 const getFeatureIcon = (feature: string) => {
   const f = feature.toLowerCase();
@@ -44,9 +46,11 @@ interface RoomModalProps {
 
 export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isBrochureOpen, setIsBrochureOpen] = useState(false);
   if (!room) return null;
 
   const images = room.gallery && room.gallery.length > 0 ? room.gallery : [room.imageUrl];
+  const hasMassageBedBrochure = room.slug === "deluxe-king" || room.slug === "premium-king";
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -57,6 +61,7 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
   };
 
   return (
+    <>
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl bg-card border-white/10 text-card-foreground p-0 overflow-hidden max-h-[90vh] flex flex-col sm:my-8 [&>button]:hidden z-[150]">
         <div className="flex flex-col overflow-y-auto">
@@ -129,6 +134,17 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
                 <p className="text-sm text-muted-foreground whitespace-pre-line leading-relaxed">
                   {room.description}
                 </p>
+                {hasMassageBedBrochure && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="border-primary/40 text-primary hover:bg-primary hover:text-primary-foreground"
+                    onClick={() => setIsBrochureOpen(true)}
+                  >
+                    <FileText className="mr-2 h-4 w-4" />
+                    View Massage Bed Brochure
+                  </Button>
+                )}
                 {room.roomNumbers && (
                   <div className="mt-4">
                     <h5 className="text-xs font-bold uppercase tracking-widest text-white mb-2">Room Numbers</h5>
@@ -189,5 +205,35 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
         </div>
       </DialogContent>
     </Dialog>
+
+    <Dialog open={isBrochureOpen} onOpenChange={setIsBrochureOpen}>
+      <DialogContent className="max-w-5xl bg-card border-white/10 text-card-foreground p-0 overflow-hidden max-h-[92vh] flex flex-col [&>button]:hidden z-[200]">
+        <DialogHeader className="flex-row items-center justify-between gap-4 px-5 py-4 border-b border-white/10">
+          <div>
+            <DialogTitle className="text-xl font-display font-bold text-primary">
+              Massage Bed Brochure
+            </DialogTitle>
+            <p className="text-sm text-muted-foreground mt-1">
+              Browse the comfort modes and wireless remote controls.
+            </p>
+          </div>
+          <DialogClose asChild>
+            <button
+              type="button"
+              className="rounded-full bg-white/5 p-2 text-white hover:bg-white/10 transition-colors"
+              aria-label="Close brochure"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </DialogClose>
+        </DialogHeader>
+        <iframe
+          src={`${massageBedBrochureUrl}#toolbar=0&navpanes=0&view=FitH`}
+          title="W&H View Residency massage bed brochure"
+          className="w-full flex-1 min-h-[70vh] bg-white"
+        />
+      </DialogContent>
+    </Dialog>
+    </>
   );
 }

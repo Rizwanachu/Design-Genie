@@ -46,7 +46,7 @@ async function buildAll() {
     recursive: true,
     filter: (source) => {
       const extension = extname(source).toLowerCase();
-      return extension === "" || [".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"].includes(extension);
+      return extension === "" || [".gif", ".jpeg", ".jpg", ".pdf", ".png", ".svg", ".webp"].includes(extension);
     },
   });
 

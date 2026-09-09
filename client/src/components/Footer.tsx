@@ -58,7 +58,7 @@ export function Footer() {
                 <Phone className="h-5 w-5 text-primary shrink-0" />
                 <div className="flex flex-col">
                   <span>+91 8129 46 8888</span>
-                  <span>+91 484 291 2900</span>
+                  <span>+91 7994912900</span>
                 </div>
               </li>
               <li className="flex items-center gap-3">

@@ -5,7 +5,7 @@ export const roomsData: Room[] = [
     id: 1,
     name: "Premium King Room",
     slug: "premium-king",
-    description: "Experience unmatched luxury with our AI-powered king-size bed featuring massage functionality, premium pillow options, smart controls, and a serene river view.",
+    description: "Experience unmatched luxury with our adjustable massage bed featuring dual massager, zero-gravity, TV, foot-recline modes, premium pillow options, smart controls, and a serene river view.",
     size: "34 sqm",
     beds: "1 Beds",
     bathrooms: 1,
@@ -31,7 +31,7 @@ export const roomsData: Room[] = [
     id: 2,
     name: "Deluxe King Room",
     slug: "deluxe-king",
-    description: "Elegant interiors, premium bedding, smart controls, and a calm river-facing atmosphere designed for comfort and relaxation.",
+    description: "Unlike the Standard Room, the Deluxe King Room includes an adjustable massage bed with smart wireless controls, multiple comfort modes, premium bedding, and a calm river-facing atmosphere.",
     size: "23 sqm",
     beds: "1 Beds",
     bathrooms: 1,
@@ -41,7 +41,7 @@ export const roomsData: Room[] = [
     price: 12000,
     roomNumbers: ["102", "103", "207", "208"],
     features: [
-      "Breakfast available on request", "Flat TV", "Writing Desk",
+      "Breakfast available on request", "Adjustable Massage Bed", "Flat TV", "Writing Desk",
       "Ironing Board",
       "Kettle", "Telephone", "Safe"
     ],

@@ -113,7 +113,7 @@ export default function Contact() {
                       +91 8129 46 8888
                     </p>
                     <p className="text-muted-foreground text-sm">
-                      +91 484 291 2900
+                      +91 7994912900
                     </p>
                   </div>
                 </div>

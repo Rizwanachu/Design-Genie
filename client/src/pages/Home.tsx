@@ -418,7 +418,7 @@ function LocationSection() {
               </div>
               <div className="flex items-center gap-3 text-sm text-white">
                 <Phone className="h-4 w-4 text-primary" />
-                +91 8129 46 8888 / +91 484 291 2900
+                +91 8129 46 8888 / +91 7994912900
               </div>
               <div className="flex items-center gap-3 text-sm text-white">
                 <Mail className="h-4 w-4 text-primary" />
@@ -441,7 +441,7 @@ function LocationSection() {
             </div>
             <div className="flex items-center gap-3 text-sm text-white">
               <Phone className="h-4 w-4 text-primary" />
-              +91 8129 46 8888 / +91 484 291 2900
+              +91 8129 46 8888 / +91 7994912900
             </div>
             <div className="flex items-center gap-3 text-sm text-white">
               <Mail className="h-4 w-4 text-primary" />
