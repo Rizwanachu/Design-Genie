@@ -90,7 +90,7 @@ function AboutSection() {
     { icon: Wifi, title: "Fast Wifi", desc: "High-speed WiFi available throughout the hotel." },
     { icon: Utensils, title: "Food & Drink", desc: "Kerala and Arabian delicacies delivered right to you." },
     { icon: Shield, title: "Hygienic Rooms", desc: "Modern best-practices to ensure high safety and cleanliness." },
-    { icon: Wind, title: "Lake View", desc: "Amazing view of Willingdon Island and Harbor Bridge." },
+    { icon: Wind, title: "Lake View", desc: "Amazing view of Willingdon Island and Harbor Bridge from 3 floor" },
   ];
 
   return (

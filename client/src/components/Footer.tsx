@@ -1,5 +1,5 @@
 import logo from "@assets/Logo2-black-1-2-2_1768773677477.png";
-import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -74,7 +74,8 @@ export function Footer() {
             <div className="flex gap-4">
               {[
                 { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61583144679550" },
-                { Icon: Instagram, href: "https://www.instagram.com/whviewresidency" }
+                { Icon: Instagram, href: "https://www.instagram.com/whviewresidency" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/company/wh-hospitality" }
               ].map(({ Icon, href }, i) => (
                 <a 
                   key={i} 
