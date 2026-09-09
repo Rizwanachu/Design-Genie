@@ -5,7 +5,7 @@ export const roomsData: Room[] = [
     id: 1,
     name: "Premium King Room",
     slug: "premium-king",
-    description: "Experience unmatched luxury with our adjustable massage bed featuring dual massager, zero-gravity, TV, foot-recline modes, premium pillow options, smart controls, and a serene river view.",
+    description: "Experience unmatched luxury with our adjustable massage bed featuring dual massager, zero-gravity, TV, foot-recline modes, premium pillow options, and smart controls.",
     size: "34 sqm",
     beds: "1 Beds",
     bathrooms: 1,
