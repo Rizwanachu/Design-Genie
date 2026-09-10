@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Wifi,
@@ -19,9 +20,8 @@ import {
 } from "@/components/ui/accordion";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import ayurvedicSpaImg from "@/assets/ayurvedic_spa_holist_8907cf1d.jpg";
 import premiumHospitalityImg from "@/assets/image_1768910772330.png";
-import cochinAirportImg from "@/assets/images/cochin-airport.jpg";
+import { additionalServices } from "@/data/additional-services";
 
 const services = [
   {
@@ -132,33 +132,19 @@ const services = [
   },
 ];
 
-const additionalServices = [
-  {
-    title: "The Kerala Spa",
-    description:
-      "Relax. Rejuvenate. Restore. Soulful spa services including relaxation massages, aromatherapy, deep tissue, facials, and body scrubs. Couple rooms available.",
-    link: "https://www.thekeralaspa.com",
-    image: "/attached_assets/image_1786084716041.png",
-    naturalSize: true,
-  },
-  {
-    title: "WH Restaurant — Arabian Sea Delights",
-    description:
-      "Now open at W&H View Residency. Savour Kerala, Arabian & Chinese cuisine — traditional breakfast, snacks, biryanis, grills, and more. Comfort in every stay, delight in every bite.",
-    phone: "+91 7994912900",
-    image: "/attached_assets/Remove_menu_and_recommendations_2K_202608071418_1786092945579.jpeg",
-    naturalSize: true,
-  },
-  {
-    title: "Airport Transfer",
-    description:
-      "Convenient and reliable airport pickup and drop-off services for a stress-free journey.",
-    image: cochinAirportImg,
-    naturalSize: false,
-  },
-];
-
 export default function PoliciesAndServices() {
+  useEffect(() => {
+    const target = window.location.hash || sessionStorage.getItem("scrollTarget");
+    if (target !== "#premium-addons") return;
+
+    sessionStorage.removeItem("scrollTarget");
+    const timer = setTimeout(() => {
+      document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
@@ -246,7 +232,7 @@ export default function PoliciesAndServices() {
           </div>
 
           {/* Additional Services */}
-          <div className="pt-20 border-t border-white/5">
+          <div id="premium-addons" className="pt-20 border-t border-white/5">
             <div className="text-center mb-12">
               <span className="text-primary font-display font-medium tracking-widest uppercase mb-2 block">
                 Premium Add-ons

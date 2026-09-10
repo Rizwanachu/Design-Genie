@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, type MouseEvent } from "react";
 import { motion } from "framer-motion";
 import { 
   Wifi, Car, Utensils, Shield, HeartHandshake, Wind, 
   MapPin, Phone, Mail, ChevronDown,
-  ChevronLeft, ChevronRight
+  ChevronLeft, ChevronRight, ArrowRight
 } from "lucide-react";
+import { useLocation } from "wouter";
 
 import { useRooms } from "@/hooks/use-rooms";
 import { type Room } from "@shared/schema";
@@ -15,6 +16,7 @@ import { RoomModal } from "@/components/RoomModal";
 import { BookingModal } from "@/components/BookingModal";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { additionalServices } from "@/data/additional-services";
 
 import aboutImage from "@assets/image.png_202609091558_1788949705121.jpeg";
 import heroImage from "@assets/Adjust_lighting_and_remove_person_202609031225_1788949741132.jpeg";
@@ -288,6 +290,75 @@ function RoomsSection() {
   );
 }
 
+// --- ADDITIONAL SERVICES PREVIEW ---
+function AdditionalServicesPreview() {
+  const [, navigate] = useLocation();
+  const previewServices = additionalServices.slice(0, 2);
+
+  const handleViewAllServices = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    sessionStorage.setItem("scrollTarget", "#premium-addons");
+    navigate("/policies");
+  };
+
+  return (
+    <section className="py-24 bg-background">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-12">
+          <span className="text-primary font-display font-medium tracking-widest uppercase mb-2 block">
+            Premium Add-ons
+          </span>
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-white">
+            Additional Services
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+            Enhance your stay with our curated spa and dining experiences.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {previewServices.map((service, idx) => (
+            <motion.div
+              key={service.title}
+              className="group relative overflow-hidden rounded-lg border border-white/5 bg-card min-h-[360px]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+            >
+              <img
+                src={service.image}
+                alt={service.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/10" />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <h3 className="text-2xl font-display font-bold text-white mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground line-clamp-2 max-w-md">
+                  {service.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <a
+            href="/policies#premium-addons"
+            onClick={handleViewAllServices}
+            className="inline-flex items-center gap-2 bg-primary hover:bg-primary/80 text-primary-foreground transition-colors font-display font-bold tracking-widest uppercase text-sm px-5 py-3 rounded-md"
+          >
+            View All Services
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // --- NEARBY SECTION ---
 function NearbySection() {
   const attractions = [
@@ -474,6 +545,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <RoomsSection />
+        <AdditionalServicesPreview />
         <NearbySection />
         <LocationSection />
       </main>
