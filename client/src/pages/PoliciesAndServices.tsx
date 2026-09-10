@@ -89,7 +89,7 @@ const services = [
     content: (
       <ul className="list-disc pl-5 space-y-1">
         <li>Spa massage with advance booking</li>
-        <li>Doctor-supervised treatments</li>
+        <li>Relaxing treatments available by appointment</li>
       </ul>
     ),
     icon: Leaf,

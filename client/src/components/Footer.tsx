@@ -1,7 +1,10 @@
 import logo from "@assets/Logo2-black-1-2-2_1768773677477.png";
 import { Facebook, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import { useLocation } from "wouter";
 
 export function Footer() {
+  const [, navigate] = useLocation();
+
   return (
     <footer className="bg-[#0A0A0A] border-t border-white/5 pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
@@ -37,7 +40,36 @@ export function Footer() {
                       {item}
                     </a>
                   ) : (
-                    <a href={item === "Explore" ? "#nearby" : item === "Policies & Services" ? "#services" : `#${item.toLowerCase()}`} className="text-muted-foreground hover:text-primary transition-colors">
+                    <a
+                      href={
+                        item === "Explore"
+                          ? "#nearby"
+                          : item === "Policies & Services"
+                            ? "/policies"
+                            : item === "Gallery"
+                              ? "/gallery"
+                              : item === "Contact"
+                                ? "/contact"
+                                : `#${item.toLowerCase()}`
+                      }
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      onClick={(event) => {
+                        const route =
+                          item === "Policies & Services"
+                            ? "/policies"
+                            : item === "Gallery"
+                              ? "/gallery"
+                              : item === "Contact"
+                                ? "/contact"
+                                : null;
+
+                        if (!route) return;
+
+                        event.preventDefault();
+                        navigate(route);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
                       {item}
                     </a>
                   )}
