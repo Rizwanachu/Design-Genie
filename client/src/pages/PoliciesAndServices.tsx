@@ -70,8 +70,8 @@ const services = [
     title: "Dining",
     content: (
       <ul className="list-disc pl-5 space-y-1">
-        <li>In-house restaurant under renovation</li>
-        <li>Online food orders available</li>
+        <li>Restaurant services may be temporarily unavailable due to maintenance</li>
+        <li>Please contact us to confirm dining availability before ordering</li>
         <li>No alcohol served</li>
       </ul>
     ),
