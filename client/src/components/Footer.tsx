@@ -1,9 +1,31 @@
 import logo from "@assets/Logo2-black-1-2-2_1768773677477.png";
 import { Facebook, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import type { MouseEvent } from "react";
 import { useLocation } from "wouter";
 
 export function Footer() {
-  const [, navigate] = useLocation();
+  const [location, navigate] = useLocation();
+
+  const handleNavigation = (
+    event: MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
+    destination: string,
+  ) => {
+    event.preventDefault();
+
+    if (destination.startsWith("#")) {
+      if (location !== "/") {
+        sessionStorage.setItem("scrollTarget", destination);
+        navigate("/");
+        return;
+      }
+
+      document.querySelector(destination)?.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+
+    navigate(destination);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <footer className="bg-[#0A0A0A] border-t border-white/5 pt-16 pb-8">
@@ -27,7 +49,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <button 
-                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  onClick={(event) => handleNavigation(event, "/")}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Home
@@ -36,7 +58,11 @@ export function Footer() {
               {["Rooms", "Explore", "Policies & Services", "Gallery", "Contact", "Privacy Policy"].map((item) => (
                 <li key={item}>
                   {item === "Privacy Policy" ? (
-                    <a href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
+                    <a
+                      href="/privacy-policy"
+                      onClick={(event) => handleNavigation(event, "/privacy-policy")}
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
                       {item}
                     </a>
                   ) : (
@@ -53,22 +79,20 @@ export function Footer() {
                                 : `#${item.toLowerCase()}`
                       }
                       className="text-muted-foreground hover:text-primary transition-colors"
-                      onClick={(event) => {
-                        const route =
-                          item === "Policies & Services"
-                            ? "/policies"
-                            : item === "Gallery"
-                              ? "/gallery"
-                              : item === "Contact"
-                                ? "/contact"
-                                : null;
-
-                        if (!route) return;
-
-                        event.preventDefault();
-                        navigate(route);
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                      }}
+                      onClick={(event) =>
+                        handleNavigation(
+                          event,
+                          item === "Explore"
+                            ? "#nearby"
+                            : item === "Policies & Services"
+                              ? "/policies"
+                              : item === "Gallery"
+                                ? "/gallery"
+                                : item === "Contact"
+                                  ? "/contact"
+                                  : `#${item.toLowerCase()}`,
+                        )
+                      }
                     >
                       {item}
                     </a>
