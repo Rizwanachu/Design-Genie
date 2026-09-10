@@ -165,7 +165,7 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex items-center gap-3 text-sm text-muted-foreground">
                       <Users className="h-4 w-4 text-primary" />
-                      <span>{room.adults} Adults, {room.children} Children</span>
+                      <span>{room.adults} Adults</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm text-muted-foreground">
                       <Bath className="h-4 w-4 text-primary" />
