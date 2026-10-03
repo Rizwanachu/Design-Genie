@@ -8,6 +8,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { PHONE } from "@/lib/site";
 import { 
   Check, Users, BedDouble, Bath, ArrowRight, ChevronLeft, ChevronRight, X, FileText,
   Tv, Shield, Wind, Wifi, Coffee, Smartphone, Snowflake, UtensilsCrossed,
@@ -192,7 +193,7 @@ export function RoomModal({ room, isOpen, onClose, onBook }: RoomModalProps) {
             </div>
 
             <div className="pt-6 border-t border-white/10">
-              <a href="tel:+918129468888" className="w-full">
+              <a href={`tel:${PHONE}`} className="w-full">
                 <Button 
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-7 text-xl font-display font-bold group"
                 >

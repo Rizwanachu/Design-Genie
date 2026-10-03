@@ -2,6 +2,7 @@ import logo from "@assets/Logo2-black-1-2-2_1768773677477.png";
 import { Facebook, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
 import type { MouseEvent } from "react";
 import { useLocation } from "wouter";
+import { PHONE_DISPLAY } from "@/lib/site";
 
 export function Footer() {
   const [location, navigate] = useLocation();
@@ -112,10 +113,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
-                <div className="flex flex-col">
-                  <span>+91 8129 46 8888</span>
-                  <span>+91 7994912900</span>
-                </div>
+                <span>{PHONE_DISPLAY}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />

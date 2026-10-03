@@ -5,6 +5,25 @@
   "outputDirectory": "dist/public",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/mock" },
+    { "source": "/policies", "destination": "/seo/policies.html" },
+    { "source": "/gallery", "destination": "/seo/gallery.html" },
+    { "source": "/contact", "destination": "/seo/contact.html" },
+    { "source": "/privacy-policy", "destination": "/seo/privacy-policy.html" },
+    { "source": "/rooms/premium-king", "destination": "/seo/room-premium-king.html" },
+    { "source": "/rooms/deluxe-king", "destination": "/seo/room-deluxe-king.html" },
+    { "source": "/rooms/standard-room", "destination": "/seo/room-standard-room.html" },
+    { "source": "/rooms/heritage-room", "destination": "/seo/room-heritage-room.html" },
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000" }
+      ]
+    }
   ]
 }

@@ -87,7 +87,10 @@ export async function registerRoutes(
   });
 
   app.get(api.rooms.get.path, async (req, res) => {
-    const room = await storage.getRoomBySlug(req.params.slug);
+    const slug = Array.isArray(req.params.slug)
+      ? req.params.slug[0]
+      : req.params.slug;
+    const room = await storage.getRoomBySlug(slug);
     if (!room) {
       return res.status(404).json({ message: "Room not found" });
     }

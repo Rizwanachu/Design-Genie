@@ -17,6 +17,8 @@ import { BookingModal } from "@/components/BookingModal";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { additionalServices } from "@/data/additional-services";
+import { SEO } from "@/components/SEO";
+import { PHONE, PHONE_DISPLAY } from "@/lib/site";
 
 import aboutImage from "@assets/image.png_202609091558_1788949705121.jpeg";
 import heroImage from "@assets/Adjust_lighting_and_remove_person_202609031225_1788949741132.jpeg";
@@ -52,7 +54,7 @@ function HeroSection() {
             Discover a sanctuary of elegance and tranquility. Your perfect getaway tailored for comfort, luxury, and unforgettable memories.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+918129468888">
+            <a href={`tel:${PHONE}`}>
               <Button 
                 size="lg" 
                 className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 font-display min-w-[180px]"
@@ -140,6 +142,8 @@ function AboutSection() {
               <img 
                 src={aboutImage}
                 alt="W&H View Residency garden dining courtyard"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-4 border border-white/20 z-10" />
@@ -235,6 +239,8 @@ function RoomsSection() {
                     <img 
                       src={room.imageUrl} 
                       alt={room.name} 
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
@@ -259,7 +265,7 @@ function RoomsSection() {
                     >
                       Details
                     </Button>
-                    <a href="tel:+918129468888" className="flex-1">
+                    <a href={`tel:${PHONE}`} className="flex-1">
                       <Button 
                         className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                       >
@@ -267,6 +273,13 @@ function RoomsSection() {
                       </Button>
                     </a>
                   </div>
+                  <a
+                    href={`/rooms/${room.slug}`}
+                    className="mt-4 inline-flex text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    View full room details
+                    <span className="sr-only"> for {room.name}</span>
+                  </a>
                 </div>
               </motion.div>
             ))}
@@ -329,6 +342,8 @@ function AdditionalServicesPreview() {
               <img
                 src={service.image}
                 alt={service.title}
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/10" />
@@ -489,7 +504,7 @@ function LocationSection() {
               </div>
               <div className="flex items-center gap-3 text-sm text-white">
                 <Phone className="h-4 w-4 text-primary" />
-                +91 8129 46 8888 / +91 7994912900
+                {PHONE_DISPLAY}
               </div>
               <div className="flex items-center gap-3 text-sm text-white">
                 <Mail className="h-4 w-4 text-primary" />
@@ -512,7 +527,7 @@ function LocationSection() {
             </div>
             <div className="flex items-center gap-3 text-sm text-white">
               <Phone className="h-4 w-4 text-primary" />
-              +91 8129 46 8888 / +91 7994912900
+              {PHONE_DISPLAY}
             </div>
             <div className="flex items-center gap-3 text-sm text-white">
               <Mail className="h-4 w-4 text-primary" />
@@ -540,6 +555,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="W&H View Residency | Boutique Hotel in Mattancherry, Kochi"
+        description="Stay at W&H View Residency in Mattancherry, Kochi. Explore comfortable hotel rooms, spa services, local attractions, and contact us to plan your stay."
+        path="/"
+      />
       <Navigation />
       <main>
         <HeroSection />

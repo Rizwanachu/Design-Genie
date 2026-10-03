@@ -1,16 +1,26 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Privacy Policy | W&H View Residency"
+        description="Read how W&H View Residency handles personal information submitted through hotel booking inquiries and website interactions."
+        path="/privacy-policy"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Privacy Policy", path: "/privacy-policy" },
+        ]}
+      />
       <Navigation />
       <main className="pt-32 pb-16">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <Card className="border-none bg-card/50 backdrop-blur-sm">
             <CardHeader className="text-center pb-8 border-b border-white/5">
-              <CardTitle className="text-3xl md:text-4xl font-display font-bold text-primary">Privacy Policy</CardTitle>
+              <h1 className="text-3xl md:text-4xl font-display font-bold text-primary">Privacy Policy</h1>
             </CardHeader>
             <CardContent className="pt-8 space-y-8 text-muted-foreground leading-relaxed">
             <section>

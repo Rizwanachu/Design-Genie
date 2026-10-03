@@ -7,6 +7,8 @@ import { useCreateInquiry } from "@/hooks/use-contact";
 import { insertInquirySchema } from "@shared/schema";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { ADDRESS, EMAIL, GEO, PHONE, PHONE_DISPLAY } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -47,6 +49,28 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Contact & Location | W&H View Residency, Mattancherry"
+        description="Contact W&H View Residency to ask about room availability and hotel services. Find our address in Mattancherry, Kochi, Kerala."
+        path="/contact"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ]}
+        schema={{
+          "@type": "LocalBusiness",
+          "@id": "https://whv-residency.com/#hotel",
+          name: "W&H View Residency",
+          telephone: PHONE,
+          email: EMAIL,
+          address: { "@type": "PostalAddress", ...ADDRESS },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: GEO.latitude,
+            longitude: GEO.longitude,
+          },
+        }}
+      />
       <Navigation />
 
       {/* Page Header */}
@@ -109,12 +133,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-display font-bold text-white mb-1">Phone</p>
-                    <p className="text-muted-foreground text-sm">
-                      +91 8129 46 8888
-                    </p>
-                    <p className="text-muted-foreground text-sm">
-                      +91 7994912900
-                    </p>
+                    <a
+                      className="text-sm text-muted-foreground hover:text-primary"
+                      href={`tel:${PHONE}`}
+                    >
+                      {PHONE_DISPLAY}
+                    </a>
                   </div>
                 </div>
 

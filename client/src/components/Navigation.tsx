@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "@assets/Logo2-black-1-2-2_1768773677477.png";
 import logoScrolled from "@assets/image_1768813235608.png";
 import { Button } from "@/components/ui/button";
+import { PHONE } from "@/lib/site";
 
 const homeSubLinks = [
   { name: "Rooms", href: "#rooms" },
@@ -180,7 +181,7 @@ export function Navigation() {
               </button>
             ))}
 
-            <a href="tel:+918129468888">
+            <a href={`tel:${PHONE}`}>
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-8 font-display tracking-widest uppercase text-xs">
                 Book Now
               </Button>
@@ -284,7 +285,7 @@ export function Navigation() {
               </div>
 
               <div className="mt-auto pt-6 pb-8">
-                <a href="tel:+918129468888" className="block w-full">
+                <a href={`tel:${PHONE}`} className="block w-full">
                   <Button
                     size="lg"
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-display tracking-widest uppercase text-sm"

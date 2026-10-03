@@ -2,6 +2,7 @@ import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
 import { cp, rm } from "fs/promises";
 import { extname } from "path";
+import { generateSeoDocuments } from "./generate-seo";
 
 // server deps to bundle to reduce openat(2) syscalls
 // which helps cold start times
@@ -49,6 +50,8 @@ async function buildAll() {
       return extension === "" || [".gif", ".jpeg", ".jpg", ".pdf", ".png", ".svg", ".webp"].includes(extension);
     },
   });
+
+  await generateSeoDocuments("dist/public");
 
   // For Vercel static, we don't need the server bundle
   // but we keep the script structure to avoid breaking the build command

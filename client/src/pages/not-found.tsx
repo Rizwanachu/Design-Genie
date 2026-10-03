@@ -1,9 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 export default function NotFound() {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
+      <SEO
+        title="Page Not Found | W&H View Residency"
+        description="The page you requested could not be found."
+        path={window.location.pathname}
+        noindex
+      />
       <Card className="w-full max-w-md mx-4">
         <CardContent className="pt-6">
           <div className="flex mb-4 gap-2">

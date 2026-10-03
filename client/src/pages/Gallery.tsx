@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ImageOff } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 
 type Category =
   | "All"
@@ -195,6 +196,15 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Hotel Rooms & Property Gallery | W&H View Residency, Kochi"
+        description="View photos of guest rooms, hotel spaces, spa services, and dining at W&H View Residency in Mattancherry, Kochi."
+        path="/gallery"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Gallery", path: "/gallery" },
+        ]}
+      />
       <Navigation />
 
       {/* Page Header */}
@@ -279,6 +289,8 @@ export default function Gallery() {
                     <img
                       src={img.src}
                       alt={img.alt}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
