@@ -62,7 +62,7 @@ export default function RoomDetail({ params }: RoomDetailProps) {
         breadcrumbs={breadcrumbs}
         schema={{
           "@type": "HotelRoom",
-          "@id": `https://whv-residency.com/rooms/${room.slug}#room`,
+          "@id": `https://www.whv-residency.com/rooms/${room.slug}#room`,
           name: room.name,
           description: room.description,
           image: room.gallery?.length ? room.gallery : [room.imageUrl],
@@ -76,7 +76,7 @@ export default function RoomDetail({ params }: RoomDetailProps) {
             name: feature,
             value: true,
           })),
-          containedInPlace: { "@id": "https://whv-residency.com/#hotel" },
+          containedInPlace: { "@id": "https://www.whv-residency.com/#hotel" },
         }}
       />
       <Navigation />

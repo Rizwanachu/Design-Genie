@@ -1,4 +1,4 @@
-export const SITE_URL = "https://whv-residency.com";
+export const SITE_URL = "https://www.whv-residency.com";
 export const HOTEL_NAME = "W&H View Residency";
 export const HOTEL_DESCRIPTION =
   "W&H View Residency offers comfortable, premium hotel stays in Mattancherry, Kochi, with thoughtfully designed rooms, spa services, dining, and airport transfers.";

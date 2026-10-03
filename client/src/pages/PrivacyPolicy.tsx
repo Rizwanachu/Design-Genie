@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
                 This Privacy Policy (“Policy”) applies to all users (“you”, “your”, “User”) who interact with:
               </p>
               <ul className="list-disc pl-6 mt-2 space-y-1">
-                <li>Our website: https://whv-residency.com</li>
+                <li>Our website: https://www.whv-residency.com</li>
                 <li>Any digital platforms, applications, or services operated by W&H</li>
               </ul>
               <p className="mt-4">

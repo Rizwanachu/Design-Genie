@@ -59,7 +59,7 @@ export default function Contact() {
         ]}
         schema={{
           "@type": "LocalBusiness",
-          "@id": "https://whv-residency.com/#hotel",
+          "@id": "https://www.whv-residency.com/#hotel",
           name: "W&H View Residency",
           telephone: PHONE,
           email: EMAIL,
