@@ -1,2 +1,3 @@
 - [Vercel npm registry](vercel-npm-registry.md) — Imported lockfiles may contain Replit-internal tarball URLs; keep a public npm registry override for external builds.
 - [Hotel catalog scope](static-room-catalog.md) — Room data stays static; don't add a database for SEO or room listings.
+- [Canonical host](canonical-host.md) — Vercel redirects the apex domain to `www`; keep SEO URLs on the `www` host.
