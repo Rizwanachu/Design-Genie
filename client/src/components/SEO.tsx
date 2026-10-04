@@ -65,6 +65,7 @@ export function SEO({
     setMeta("property", "og:title", title);
     setMeta("property", "og:description", description);
     setMeta("property", "og:type", type);
+    setMeta("property", "og:locale", "en_IN");
     setMeta("property", "og:url", canonicalUrl);
     setMeta("property", "og:image", imageUrl);
     setMeta("property", "og:site_name", HOTEL_NAME);
@@ -127,13 +128,15 @@ export function SEO({
     }
 
     const hotelReference = {
-      "@type": "LodgingBusiness",
+      "@type": "Hotel",
       "@id": `${SITE_URL}#hotel`,
       name: HOTEL_NAME,
       url: SITE_URL,
       description: HOTEL_DESCRIPTION,
       telephone: PHONE,
       email: EMAIL,
+      image: imageUrl,
+      sameAs: SOCIAL_LINKS,
       address: {
         "@type": "PostalAddress",
         ...ADDRESS,

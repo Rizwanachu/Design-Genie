@@ -7,6 +7,8 @@ import {
   GEO,
   HOTEL_DESCRIPTION,
   HOTEL_NAME,
+  HOME_PAGE_DESCRIPTION,
+  HOME_PAGE_TITLE,
   PHONE,
   SITE_URL,
   SOCIAL_LINKS,
@@ -57,11 +59,14 @@ const basePages: Page[] = [
       { name: "Contact", path: "/contact" },
     ],
     extraSchema: {
-      "@type": "LocalBusiness",
+      "@type": "Hotel",
       "@id": `${SITE_URL}/#hotel`,
       name: HOTEL_NAME,
+      url: SITE_URL,
+      description: HOTEL_DESCRIPTION,
       telephone: PHONE,
       email: EMAIL,
+      sameAs: SOCIAL_LINKS,
       address: { "@type": "PostalAddress", ...ADDRESS },
       geo: {
         "@type": "GeoCoordinates",
@@ -147,6 +152,8 @@ function buildHtml(template: string, page: Page) {
   html = setMeta(html, 'property="og:title"', `<meta property="og:title" content="${page.title}" />`);
   html = setMeta(html, 'property="og:description"', `<meta property="og:description" content="${page.description}" />`);
   html = setMeta(html, 'property="og:type"', '<meta property="og:type" content="website" />');
+  html = setMeta(html, 'property="og:locale"', '<meta property="og:locale" content="en_IN" />');
+  html = setMeta(html, 'property="og:site_name"', `<meta property="og:site_name" content="${HOTEL_NAME}" />`);
   html = setMeta(html, 'property="og:url"', `<meta property="og:url" content="${canonicalUrl}" />`);
   html = setMeta(html, 'property="og:image"', `<meta property="og:image" content="${imageUrl}" />`);
   html = setMeta(html, 'name="twitter:card"', '<meta name="twitter:card" content="summary_large_image" />');
@@ -169,17 +176,20 @@ export async function generateSeoDocuments(publicDirectory: string) {
   const home: Page = {
     file: "index.html",
     path: "/",
-    title: "W&H View Residency | Boutique Hotel in Mattancherry, Kochi",
-    description:
-      "Stay at W&H View Residency in Mattancherry, Kochi. Explore comfortable hotel rooms, local attractions, and contact us to plan your stay.",
+    title: HOME_PAGE_TITLE,
+    description: HOME_PAGE_DESCRIPTION,
     extraSchema: {
-      "@type": "LodgingBusiness",
+      "@type": "Hotel",
       "@id": `${SITE_URL}/#hotel`,
       name: HOTEL_NAME,
       url: SITE_URL,
       description: HOTEL_DESCRIPTION,
       telephone: PHONE,
       email: EMAIL,
+      image: absoluteUrl(
+        "/attached_assets/Adjust_lighting_and_remove_person_202609031225_1788949741132.jpeg",
+      ),
+      sameAs: SOCIAL_LINKS,
       address: { "@type": "PostalAddress", ...ADDRESS },
       geo: {
         "@type": "GeoCoordinates",

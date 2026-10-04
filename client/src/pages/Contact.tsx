@@ -8,7 +8,17 @@ import { insertInquirySchema } from "@shared/schema";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { ADDRESS, EMAIL, GEO, PHONE, PHONE_DISPLAY } from "@/lib/site";
+import {
+  ADDRESS,
+  EMAIL,
+  GEO,
+  HOTEL_DESCRIPTION,
+  HOTEL_NAME,
+  PHONE,
+  PHONE_DISPLAY,
+  SITE_URL,
+  SOCIAL_LINKS,
+} from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -58,11 +68,14 @@ export default function Contact() {
           { name: "Contact", path: "/contact" },
         ]}
         schema={{
-          "@type": "LocalBusiness",
-          "@id": "https://www.whv-residency.com/#hotel",
-          name: "W&H View Residency",
+          "@type": "Hotel",
+          "@id": `${SITE_URL}/#hotel`,
+          name: HOTEL_NAME,
+          url: SITE_URL,
+          description: HOTEL_DESCRIPTION,
           telephone: PHONE,
           email: EMAIL,
+          sameAs: SOCIAL_LINKS,
           address: { "@type": "PostalAddress", ...ADDRESS },
           geo: {
             "@type": "GeoCoordinates",

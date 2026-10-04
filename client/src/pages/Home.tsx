@@ -18,7 +18,12 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { additionalServices } from "@/data/additional-services";
 import { SEO } from "@/components/SEO";
-import { PHONE, PHONE_DISPLAY } from "@/lib/site";
+import {
+  HOME_PAGE_DESCRIPTION,
+  HOME_PAGE_TITLE,
+  PHONE,
+  PHONE_DISPLAY,
+} from "@/lib/site";
 
 import aboutImage from "@assets/image.png_202609091558_1788949705121.jpeg";
 import heroImage from "@assets/Adjust_lighting_and_remove_person_202609031225_1788949741132.jpeg";
@@ -47,11 +52,11 @@ function HeroSection() {
             Welcome to W & H View Residency
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
-            Comfortable Stays. <br />
-            <span className="text-primary italic">Premium Experience.</span>
+            Boutique Hotel <br />
+            <span className="text-primary italic">in Mattancherry, Kochi</span>
           </h1>
           <p className="max-w-xl mx-auto text-lg text-gray-300 mb-8 font-light leading-relaxed">
-            Discover a sanctuary of elegance and tranquility. Your perfect getaway tailored for comfort, luxury, and unforgettable memories.
+            Looking for a hotel in Kochi? W&amp;H View Residency is on Jew Town Road in Mattancherry, near Mattancherry Palace and Paradesi Synagogue. Explore our rooms and call to check availability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={`tel:${PHONE}`}>
@@ -555,8 +560,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="W&H View Residency | Boutique Hotel in Mattancherry, Kochi"
-        description="Stay at W&H View Residency in Mattancherry, Kochi. Explore comfortable hotel rooms, local attractions, and contact us to plan your stay."
+        title={HOME_PAGE_TITLE}
+        description={HOME_PAGE_DESCRIPTION}
         path="/"
       />
       <Navigation />

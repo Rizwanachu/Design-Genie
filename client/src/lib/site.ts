@@ -1,7 +1,11 @@
 export const SITE_URL = "https://www.whv-residency.com";
 export const HOTEL_NAME = "W&H View Residency";
+export const HOME_PAGE_TITLE =
+  "Boutique Hotel in Mattancherry, Kochi | W&H View Residency";
+export const HOME_PAGE_DESCRIPTION =
+  "Looking for a hotel in Kochi? Stay at W&H View Residency on Jew Town Road in Mattancherry, near Paradesi Synagogue. Call us to ask about room availability.";
 export const HOTEL_DESCRIPTION =
-  "W&H View Residency offers comfortable, premium hotel stays in Mattancherry, Kochi, with thoughtfully designed rooms, dining, and airport transfers.";
+  "W&H View Residency is a hotel on Jew Town Road in Mattancherry, Kochi, near Paradesi Synagogue and Mattancherry Palace. Contact us for room availability and airport transfers.";
 export const PHONE = "+917994912900";
 export const PHONE_DISPLAY = "+91 7994912900";
 export const EMAIL = "info@whv-residency.com";
