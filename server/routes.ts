@@ -26,7 +26,7 @@ async function seedDatabase() {
         "Ironing Board",
         "Kettle", "Telephone", "Safe"
       ],
-      imageUrl: "/assets/image_1768910147198.png",
+      imageUrl: "/assets/image_1768910147198.webp",
     });
 
     await storage.createRoom({

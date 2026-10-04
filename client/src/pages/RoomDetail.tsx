@@ -107,6 +107,8 @@ export default function RoomDetail({ params }: RoomDetailProps) {
               <img
                 src={room.imageUrl}
                 alt={`${room.name} at W&H View Residency in Kochi`}
+                loading="eager"
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover"
               />
               {room.gallery && room.gallery.length > 1 && (

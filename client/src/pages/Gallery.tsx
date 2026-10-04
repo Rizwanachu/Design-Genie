@@ -4,6 +4,8 @@ import { X, ChevronLeft, ChevronRight, ImageOff } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import aboutImage from "@assets/image.png_202609091558_1788949705121.webp";
+import heroImage from "@assets/Adjust_lighting_and_remove_person_202609031225_1788949741132.webp";
 
 type Category =
   | "All"
@@ -23,112 +25,112 @@ interface GalleryImage {
 const allImages: GalleryImage[] = [
   // Hotel
   {
-    src: "/assets/image_1768910772330.png",
+    src: "/assets/image_1768910772330.webp",
     alt: "Hotel lobby lounge",
     category: "Hotel",
   },
   {
-    src: "/attached_assets/image.png_202609091558_1788950964864.jpeg",
+    src: aboutImage,
     alt: "Hotel garden lounge and covered courtyard",
     category: "Hotel",
   },
   {
-    src: "/attached_assets/Adjust_lighting_and_remove_person_202609031225_1788950964865.jpeg",
+    src: heroImage,
     alt: "Hotel reception and lobby lounge",
     category: "Hotel",
   },
   {
-    src: "/attached_assets/Cleaning_building_and_surroundings_2K_202608131947_1788950964866.jpeg",
+    src: "/attached_assets/Cleaning_building_and_surroundings_2K_202608131947_1788950964866.webp",
     alt: "W&H View Residency exterior",
     category: "Hotel",
   },
   // Premium King Room
   {
-    src: "/assets/image_1768910147198.png",
+    src: "/assets/image_1768910147198.webp",
     alt: "Premium King Room – bedroom overview",
     category: "Premium King Room",
   },
   {
-    src: "/assets/image_1768910169247.png",
+    src: "/assets/image_1768910169247.webp",
     alt: "Premium King Room – river view angle",
     category: "Premium King Room",
   },
   {
-    src: "/assets/image_1768910180678.png",
+    src: "/assets/image_1768910180678.webp",
     alt: "Premium King Room – en-suite bathroom",
     category: "Premium King Room",
   },
   {
-    src: "/assets/image_1768910190709.png",
+    src: "/assets/image_1768910190709.webp",
     alt: "Premium King Room – double-door bathroom",
     category: "Premium King Room",
   },
   // Standard Rooms
   {
-    src: "/attached_assets/image_1786021526150.png",
+    src: "/attached_assets/image_1786021526150.webp",
     alt: "Standard Room – bedroom overview",
     category: "Standard Rooms",
   },
   {
-    src: "/attached_assets/image_1786021533433.png",
+    src: "/attached_assets/image_1786021533433.webp",
     alt: "Standard Room – bedroom angle",
     category: "Standard Rooms",
   },
   {
-    src: "/attached_assets/image_1786021540505.png",
+    src: "/attached_assets/image_1786021540505.webp",
     alt: "Standard Room – bathroom",
     category: "Standard Rooms",
   },
   // Heritage Room
   {
-    src: "/assets/image_1786019758544.png",
+    src: "/assets/image_1786019758544.webp",
     alt: "Heritage Room – four-poster bedroom",
     category: "Heritage Room",
   },
   {
-    src: "/assets/image_1786019842267.png",
+    src: "/assets/image_1786019842267.webp",
     alt: "Heritage Room – bedroom angle",
     category: "Heritage Room",
   },
   {
-    src: "/assets/image_1786019850532.png",
+    src: "/assets/image_1786019850532.webp",
     alt: "Heritage Room – bathroom",
     category: "Heritage Room",
   },
   {
-    src: "/assets/image_1786019869041.png",
+    src: "/assets/image_1786019869041.webp",
     alt: "Heritage Room – bathroom overview",
     category: "Heritage Room",
   },
   // Deluxe King Room
   {
-    src: "/attached_assets/image_1786021526150.png",
+    src: "/attached_assets/image_1786021526150.webp",
     alt: "Deluxe King Room – bedroom overview",
     category: "Deluxe King Room",
   },
   {
-    src: "/attached_assets/image_1786021533433.png",
+    src: "/attached_assets/image_1786021533433.webp",
     alt: "Deluxe King Room – bedroom angle",
     category: "Deluxe King Room",
   },
   {
-    src: "/attached_assets/image_1786021540505.png",
+    src: "/attached_assets/image_1786021540505.webp",
     alt: "Deluxe King Room – bathroom",
     category: "Deluxe King Room",
   },
   // Restaurant
   {
-    src: "/arabian-sea-delights.jpeg",
+    src: "/assets/arabian-sea-delights.webp",
     alt: "WH Restaurant – Arabian Sea Delights",
     category: "Restaurant",
   },
   {
-    src: "/attached_assets/Clean_restaurant_and_fix_lighting_202608071057_1786080488154.jpeg",
+    src: "/attached_assets/Clean_restaurant_and_fix_lighting_202608071057_1786080488154.webp",
     alt: "WH Restaurant – bright dining area",
     category: "Restaurant",
   },
   {
-    src: "/attached_assets/Clean_empty_restaurant_202608071053_1786080488157.jpeg",
+    src: "/attached_assets/Clean_empty_restaurant_202608071053_1786080488157.webp",
     alt: "WH Restaurant – dining area and lounge",
     category: "Restaurant",
   },

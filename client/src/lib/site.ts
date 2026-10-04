@@ -1,5 +1,7 @@
 export const SITE_URL = "https://www.whv-residency.com";
 export const HOTEL_NAME = "W&H View Residency";
+export const HOTEL_SOCIAL_IMAGE =
+  "/attached_assets/whv-residency-social-20261004.jpg";
 export const HOME_PAGE_TITLE =
   "Boutique Hotel in Mattancherry, Kochi | W&H View Residency";
 export const HOME_PAGE_DESCRIPTION =

@@ -25,8 +25,8 @@ import {
   PHONE_DISPLAY,
 } from "@/lib/site";
 
-import aboutImage from "@assets/image.png_202609091558_1788949705121.jpeg";
-import heroImage from "@assets/Adjust_lighting_and_remove_person_202609031225_1788949741132.jpeg";
+import aboutImage from "@assets/image.png_202609091558_1788949705121.webp";
+import heroImage from "@assets/Adjust_lighting_and_remove_person_202609031225_1788949741132.webp";
 
 // --- HERO SECTION ---
 function HeroSection() {
@@ -37,6 +37,7 @@ function HeroSection() {
         <img 
           src={heroImage}
           alt="W&H View Residency reception and lounge"
+          loading="eager"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />

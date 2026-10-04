@@ -19,7 +19,6 @@ import {
 } from "@/components/ui/accordion";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import premiumHospitalityImg from "@/assets/image_1768910772330.png";
 import { additionalServices } from "@/data/additional-services";
 import { SEO } from "@/components/SEO";
 
@@ -186,8 +185,10 @@ export default function PoliciesAndServices() {
               {/* Service Image */}
               <div className="rounded-lg overflow-hidden h-[300px] border border-white/10 relative group">
                 <img
-                  src={premiumHospitalityImg}
+                  src="/assets/image_1768910772330.webp"
                   alt="Premium Hospitality"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/40" />

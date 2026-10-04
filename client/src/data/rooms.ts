@@ -19,12 +19,12 @@ export const roomsData: Room[] = [
       "Ironing Board",
       "Kettle", "Telephone", "Safe"
     ],
-    imageUrl: "/assets/image_1768910147198.png",
+    imageUrl: "/assets/image_1768910147198.webp",
     gallery: [
-      "/assets/image_1768910147198.png",
-      "/assets/image_1768910169247.png",
-      "/assets/image_1768910180678.png",
-      "/assets/image_1768910190709.png"
+      "/assets/image_1768910147198.webp",
+      "/assets/image_1768910169247.webp",
+      "/assets/image_1768910180678.webp",
+      "/assets/image_1768910190709.webp"
     ]
   },
   {
@@ -45,11 +45,11 @@ export const roomsData: Room[] = [
       "Ironing Board",
       "Kettle", "Telephone", "Safe"
     ],
-    imageUrl: "/attached_assets/image_1786021526150.png",
+    imageUrl: "/attached_assets/image_1786021526150.webp",
     gallery: [
-      "/attached_assets/image_1786021526150.png",
-      "/attached_assets/image_1786021533433.png",
-      "/attached_assets/image_1786021540505.png"
+      "/attached_assets/image_1786021526150.webp",
+      "/attached_assets/image_1786021533433.webp",
+      "/attached_assets/image_1786021540505.webp"
     ]
   },
   {
@@ -70,11 +70,11 @@ export const roomsData: Room[] = [
       "Ironing Board",
       "Kettle", "Telephone", "Safe"
     ],
-    imageUrl: "/attached_assets/image_1786021526150.png",
+    imageUrl: "/attached_assets/image_1786021526150.webp",
     gallery: [
-      "/attached_assets/image_1786021526150.png",
-      "/attached_assets/image_1786021533433.png",
-      "/attached_assets/image_1786021540505.png"
+      "/attached_assets/image_1786021526150.webp",
+      "/attached_assets/image_1786021533433.webp",
+      "/attached_assets/image_1786021540505.webp"
     ]
   },
   {
@@ -95,12 +95,12 @@ export const roomsData: Room[] = [
       "Shower", "Ironing Board", "Kettle",
       "Telephone", "Safe", "Air Conditioning"
     ],
-    imageUrl: "/assets/image_1786019758544.png",
+    imageUrl: "/assets/image_1786019758544.webp",
     gallery: [
-      "/assets/image_1786019758544.png",
-      "/assets/image_1786019842267.png",
-      "/assets/image_1786019850532.png",
-      "/assets/image_1786019869041.png"
+      "/assets/image_1786019758544.webp",
+      "/assets/image_1786019842267.webp",
+      "/assets/image_1786019850532.webp",
+      "/assets/image_1786019869041.webp"
     ]
   }
 ];

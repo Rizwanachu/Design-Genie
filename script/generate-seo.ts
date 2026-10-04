@@ -7,6 +7,7 @@ import {
   GEO,
   HOTEL_DESCRIPTION,
   HOTEL_NAME,
+  HOTEL_SOCIAL_IMAGE,
   HOME_PAGE_DESCRIPTION,
   HOME_PAGE_TITLE,
   PHONE,
@@ -142,10 +143,7 @@ function setMeta(html: string, selector: string, tag: string) {
 
 function buildHtml(template: string, page: Page) {
   const canonicalUrl = absoluteUrl(page.path);
-  const imageUrl = absoluteUrl(
-    page.image ??
-      "/attached_assets/Adjust_lighting_and_remove_person_202609031225_1788949741132.jpeg",
-  );
+  const imageUrl = absoluteUrl(page.image ?? HOTEL_SOCIAL_IMAGE);
   let html = template.replace(/<title>[\s\S]*?<\/title>/, `<title>${page.title}</title>`);
   html = setMeta(html, 'name="description"', `<meta name="description" content="${page.description}" />`);
   html = setMeta(html, 'name="robots"', '<meta name="robots" content="index,follow" />');
@@ -186,9 +184,7 @@ export async function generateSeoDocuments(publicDirectory: string) {
       description: HOTEL_DESCRIPTION,
       telephone: PHONE,
       email: EMAIL,
-      image: absoluteUrl(
-        "/attached_assets/Adjust_lighting_and_remove_person_202609031225_1788949741132.jpeg",
-      ),
+      image: absoluteUrl(HOTEL_SOCIAL_IMAGE),
       sameAs: SOCIAL_LINKS,
       address: { "@type": "PostalAddress", ...ADDRESS },
       geo: {
