@@ -1,7 +1,7 @@
 import { useState, useEffect, type MouseEvent } from "react";
 import { motion } from "framer-motion";
 import { 
-  Wifi, Car, Utensils, Shield, HeartHandshake, Wind, 
+  Wifi, Car, Utensils, Shield, Wind,
   MapPin, Phone, Mail, ChevronDown,
   ChevronLeft, ChevronRight, ArrowRight
 } from "lucide-react";
@@ -90,7 +90,6 @@ function HeroSection() {
 function AboutSection() {
   const features = [
     { icon: Car, title: "Transportations", desc: "Convenient options to explore the city with ease." },
-    { icon: HeartHandshake, title: "SPA", desc: "Indulge in relaxation and rejuvenation at our luxurious spa." },
     { icon: Wifi, title: "Fast Wifi", desc: "High-speed WiFi available throughout the hotel." },
     { icon: Utensils, title: "Food & Drink", desc: "Kerala and Arabian delicacies delivered right to you." },
     { icon: Shield, title: "Hygienic Rooms", desc: "Modern best-practices to ensure high safety and cleanliness." },
@@ -325,7 +324,7 @@ function AdditionalServicesPreview() {
             Additional Services
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
-            Enhance your stay with our curated spa and dining experiences.
+            Enhance your stay with our dining experiences and airport transfers.
           </p>
         </div>
 
@@ -557,7 +556,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <SEO
         title="W&H View Residency | Boutique Hotel in Mattancherry, Kochi"
-        description="Stay at W&H View Residency in Mattancherry, Kochi. Explore comfortable hotel rooms, spa services, local attractions, and contact us to plan your stay."
+        description="Stay at W&H View Residency in Mattancherry, Kochi. Explore comfortable hotel rooms, local attractions, and contact us to plan your stay."
         path="/"
       />
       <Navigation />

@@ -1,14 +1,15 @@
 import cochinAirportImg from "@/assets/images/cochin-airport.jpg";
 
-export const additionalServices = [
-  {
-    title: "The Kerala Spa",
-    description:
-      "Relax. Rejuvenate. Restore. Soulful spa services including relaxation massages, aromatherapy, deep tissue, facials, and body scrubs. Couple rooms available.",
-    link: "https://www.thekeralaspa.com",
-    image: "/attached_assets/image_1786084716041.png",
-    naturalSize: true,
-  },
+type AdditionalService = {
+  title: string;
+  description: string;
+  link?: string;
+  phone?: string;
+  image: string;
+  naturalSize: boolean;
+};
+
+export const additionalServices: AdditionalService[] = [
   {
     title: "WH Restaurant — Arabian Sea Delights",
     description:

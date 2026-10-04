@@ -5,7 +5,6 @@ import {
   Car,
   Utensils,
   Ban,
-  Leaf,
   CalendarCheck,
   PawPrint,
   CreditCard,
@@ -85,17 +84,6 @@ const services = [
     icon: Wifi,
   },
   {
-    id: "spa",
-    title: "Spa",
-    content: (
-      <ul className="list-disc pl-5 space-y-1">
-        <li>Spa massage with advance booking</li>
-        <li>Relaxing treatments available by appointment</li>
-      </ul>
-    ),
-    icon: Leaf,
-  },
-  {
     id: "parking",
     title: "Parking",
     content: (
@@ -150,7 +138,7 @@ export default function PoliciesAndServices() {
     <div className="min-h-screen bg-background text-foreground">
       <SEO
         title="Hotel Policies & Services | W&H View Residency, Kochi"
-        description="Review check-in and check-out times, hotel policies, spa services, dining availability, parking, Wi-Fi, and additional services at W&H View Residency in Kochi."
+        description="Review check-in and check-out times, hotel policies, dining availability, parking, Wi-Fi, and additional services at W&H View Residency in Kochi."
         path="/policies"
         breadcrumbs={[
           { name: "Home", path: "/" },

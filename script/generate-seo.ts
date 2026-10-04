@@ -29,7 +29,7 @@ const basePages: Page[] = [
     path: "/policies",
     title: "Hotel Policies & Services | W&H View Residency, Kochi",
     description:
-      "Review check-in and check-out times, hotel policies, spa services, dining availability, parking, Wi-Fi, and additional services at W&H View Residency in Kochi.",
+      "Review check-in and check-out times, hotel policies, dining availability, parking, Wi-Fi, and additional services at W&H View Residency in Kochi.",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Policies & Services", path: "/policies" },
@@ -40,7 +40,7 @@ const basePages: Page[] = [
     path: "/gallery",
     title: "Hotel Rooms & Property Gallery | W&H View Residency, Kochi",
     description:
-      "View photos of guest rooms, hotel spaces, spa services, and dining at W&H View Residency in Mattancherry, Kochi.",
+      "View photos of guest rooms, hotel spaces, and dining at W&H View Residency in Mattancherry, Kochi.",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Gallery", path: "/gallery" },
@@ -171,7 +171,7 @@ export async function generateSeoDocuments(publicDirectory: string) {
     path: "/",
     title: "W&H View Residency | Boutique Hotel in Mattancherry, Kochi",
     description:
-      "Stay at W&H View Residency in Mattancherry, Kochi. Explore comfortable hotel rooms, spa services, local attractions, and contact us to plan your stay.",
+      "Stay at W&H View Residency in Mattancherry, Kochi. Explore comfortable hotel rooms, local attractions, and contact us to plan your stay.",
     extraSchema: {
       "@type": "LodgingBusiness",
       "@id": `${SITE_URL}/#hotel`,

@@ -12,7 +12,6 @@ type Category =
   | "Deluxe King Room"
   | "Premium King Room"
   | "Heritage Room"
-  | "Spa"
   | "Restaurant";
 
 interface GalleryImage {
@@ -117,32 +116,6 @@ const allImages: GalleryImage[] = [
     alt: "Deluxe King Room – bathroom",
     category: "Deluxe King Room",
   },
-  // Spa
-  {
-    src: "/assets/ayurvedic_spa_holist_8907cf1d.jpg",
-    alt: "Ayurvedic wellness treatment",
-    category: "Spa",
-  },
-  {
-    src: "/kerala-spa.png",
-    alt: "The Kerala Spa",
-    category: "Spa",
-  },
-  {
-    src: "/attached_assets/image_1786081073837.png",
-    alt: "The Kerala Spa – soulfulness spa services",
-    category: "Spa",
-  },
-  {
-    src: "/attached_assets/Cleaning_spa_room_with_items_202608071237_1786088116276.jpeg",
-    alt: "The Kerala Spa – treatment room with massage items",
-    category: "Spa",
-  },
-  {
-    src: "/attached_assets/Cleaning_and_lighting_spa_room_202608071249_1786088135701.jpeg",
-    alt: "The Kerala Spa – illuminated treatment room",
-    category: "Spa",
-  },
   // Restaurant
   {
     src: "/arabian-sea-delights.jpeg",
@@ -168,7 +141,6 @@ const TABS: Category[] = [
   "Deluxe King Room",
   "Premium King Room",
   "Heritage Room",
-  "Spa",
   "Restaurant",
 ];
 
@@ -198,7 +170,7 @@ export default function Gallery() {
     <div className="min-h-screen bg-background text-foreground">
       <SEO
         title="Hotel Rooms & Property Gallery | W&H View Residency, Kochi"
-        description="View photos of guest rooms, hotel spaces, spa services, and dining at W&H View Residency in Mattancherry, Kochi."
+        description="View photos of guest rooms, hotel spaces, and dining at W&H View Residency in Mattancherry, Kochi."
         path="/gallery"
         breadcrumbs={[
           { name: "Home", path: "/" },
